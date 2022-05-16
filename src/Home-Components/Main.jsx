@@ -7,6 +7,7 @@ import MidBanner from "../Home-Components/MidBanner";
 import Trending from "../Home-Components/Trending";
 import BottomBanner from "../Home-Components/BottomBanner";
 import Advertise from "../Home-Components/Advertise";
+import Footer from "../Home-Components/Footer";
 
 import React from "react";
 
@@ -22,6 +23,7 @@ const Main = () => {
       <Trending />
       <BottomBanner />
       <Advertise />
+      <Footer />
     </div>
   );
 };

@@ -1,10 +1,17 @@
 import React from "react";
+import logo from "../assets/logo.png";
 import {CgProfile} from "react-icons/cg";
 
 const MenuPanel = () => {
   return (
-    <div className="flex h-10 bg-[#FCB512] items-center text-lg font-bold">
-      <ul className="pl-20">
+    <div className="flex font-body h-16 border-b drop-shadow-2xl items-center  text-lg font-medium">
+      <img
+        className="flex pl-5"
+        src={logo}
+        style={{height: "71%", width: "6%"}}
+        alt="logo"
+      />
+      <ul className="pl-56 flex  space-x-10">
         <li className="inline">
           <a href="home.asp">Home</a>
         </li>

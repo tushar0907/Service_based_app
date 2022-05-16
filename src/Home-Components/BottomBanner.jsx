@@ -3,7 +3,7 @@ import React from "react";
 const BottomBanner = () => {
   return (
     <div
-      className="flex flex-col p-9 bg-no-repeat bg-cover mt-20 ml-auto mr-auto h-52  w-1/2"
+      className="flex font-worksans flex-col p-9 bg-no-repeat bg-cover mt-20 ml-auto mr-auto h-52  w-1/2"
       style={{
         backgroundImage: `url(${require("../assets/BgEnd.jpg")}`,
       }}>
