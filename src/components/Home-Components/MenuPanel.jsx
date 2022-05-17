@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 import {CgProfile} from "react-icons/cg";
 
 const MenuPanel = () => {

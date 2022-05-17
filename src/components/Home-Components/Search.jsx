@@ -3,13 +3,15 @@ import {FaMapMarkerAlt} from "react-icons/fa";
 
 const Search = () => {
   return (
-    <div className="flex p-3 font-worksans">
-      <input
-        className="flex drop-shadow-2xl ml-16 mt-2 border-black text-sd rounded-3xl h-10 w-80"
-        type="text"
-        placeholder="Search services & packages"
-        name="search"
-      />
+    <div className="flex items-center p-3">
+      <div className="flex flex-1">
+        <input
+          className="flex border p-4 px-6 mt-2 text-sd rounded-3xl h-10 w-2/4"
+          type="text"
+          placeholder="Search services & packages"
+          name="search"
+        />
+      </div>
       <div className="flex ml-auto flex-col items-center mr-2">
         <div className="flex items-center font-bold">
           <FaMapMarkerAlt

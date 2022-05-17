@@ -2,16 +2,14 @@ import React from "react";
 
 const Trending = () => {
   return (
-    <div className="flex font-worksans justify-center  p-10 mt-10 pl-20 flex-col h-72">
-      <div className="flex pl-56 text-lg font-bold p-3">Trending Services</div>
-      <div className="flex pl-56 opacity-20 pb-1">
-        Most used Services around you
-      </div>
-      <div className="flex flex-1 w-9/12 ml-auto mr-auto">
+    <div className="flex font-worksans justify-center mt-10 flex-col h-72">
+      <div className="flex text-lg font-bold py-3">Trending Services</div>
+      <div className="flex opacity-20 pb-1">Most used Services around you</div>
+      <div className="flex flex-1 mt-5">
         <div className="flex flex-1 rounded-lg mr-4 bg-gradient-to-r from-yellow-500 to-yellow-200">
           <div className="flex">
             <img
-              src={require("../assets/person.png")}
+              src={require("../../assets/person.png")}
               alt="person"
               width="110"
             />
@@ -28,7 +26,7 @@ const Trending = () => {
           <div className="flex flex-1 rounded-lg mr-4 bg-gradient-to-r from-yellow-500 to-yellow-200">
             <div className="flex">
               <img
-                src={require("../assets/person.png")}
+                src={require("../../assets/person.png")}
                 alt="person"
                 width="110"
               />
@@ -46,7 +44,7 @@ const Trending = () => {
           <div className="flex flex-1 rounded-lg mr-4 bg-gradient-to-r from-yellow-500 to-yellow-200">
             <div className="flex">
               <img
-                src={require("../assets/person.png")}
+                src={require("../../assets/person.png")}
                 alt="person"
                 width="110"
               />

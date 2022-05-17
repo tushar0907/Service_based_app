@@ -5,7 +5,7 @@ const BottomBanner = () => {
     <div
       className="flex font-worksans flex-col p-9 bg-no-repeat bg-cover mt-20 ml-auto mr-auto h-52  w-1/2"
       style={{
-        backgroundImage: `url(${require("../assets/BgEnd.jpg")}`,
+        backgroundImage: `url(${require("../../assets/BgEnd.jpg")}`,
       }}>
       <div className="text-white ml-auto flex flex-1 text-2xl">
         YOU ARE PROTECTED

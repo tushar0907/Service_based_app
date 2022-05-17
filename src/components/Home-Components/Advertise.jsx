@@ -2,7 +2,7 @@ import React from "react";
 
 const Advertise = () => {
   return (
-    <div className="flex p-7 flex-col font-worksans ml-auto pt-5 mr-auto h-64 mt-20 bg-[#FFE9B8] w-2/3">
+    <div className="flex p-7 flex-col font-worksans pt-5 h-64 mt-20 bg-[#FFE9B8] rounded-lg">
       <div className="flex pl-5 pt-4 justify-start items-center text-2xl font-bold">
         Earn $ 250 for every Friend you Refer
       </div>
@@ -16,7 +16,7 @@ const Advertise = () => {
         </div>
         <div className="flex flex-1 justify-end">
           <img
-            src={require("../assets/Advertise.png")}
+            src={require("../../assets/Advertise.png")}
             alt="person"
             width="240"
           />
