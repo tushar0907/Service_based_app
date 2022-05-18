@@ -4,7 +4,7 @@ import Menu from "../components/Profile/Menu";
 
 const profile = () => {
   return (
-    <div className="flex">
+    <div className="flex w-full">
       <Menu />
       <Information />
     </div>

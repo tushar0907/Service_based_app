@@ -1,6 +1,9 @@
 import "./App.css";
 import Navigation from "./components/common/Navigation";
 import Home from "./pages/home";
+import Profile from "./pages/profile";
+import Category from "./pages/category";
+import Vehicle from "./pages/Vehicle";
 import React from "react";
 
 function App() {
@@ -18,7 +21,10 @@ function App() {
         <Navigation />
       </div>
       <div className="flex overflow-y-auto justify-center w-full">
-        <Home />
+        {/* <Home /> */}
+        {/* <Profile /> */}
+        {/* <Category /> */}
+        <Vehicle />
       </div>
     </div>
   );

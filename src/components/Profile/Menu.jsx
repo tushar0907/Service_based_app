@@ -8,7 +8,7 @@ import {BiExit} from "react-icons/bi";
 
 const Menu = () => {
   return (
-    <div className="flex pl-4 pt-5 border-r ml-6 w-1/3 flex-col drop-shadow-2xl">
+    <div className="flex pt-5 justify-end w-1/4 flex-col drop-shadow-2xl">
       <div className="flex justify-center items-start pl-6 h-full flex-col">
         <div className="flex text-xl ">
           Hello,&nbsp;&nbsp;<p className="font-bold">Aryan Negi</p>
@@ -50,7 +50,7 @@ const Menu = () => {
         </div>
       </div>
       <div className="flex font-medium justify-start p-20 items-center text-2xl h-60">
-        <BiExit />
+        <BiExit size="60" />
         <p>Logout</p>
       </div>
     </div>
