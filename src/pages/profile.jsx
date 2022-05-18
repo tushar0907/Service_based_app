@@ -2,7 +2,7 @@ import React from "react";
 import Information from "../components/Profile/Information";
 import Menu from "../components/Profile/Menu";
 
-const profile = () => {
+const Profile = () => {
   return (
     <div className="flex w-full">
       <Menu />
@@ -11,4 +11,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;

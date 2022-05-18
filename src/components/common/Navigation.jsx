@@ -4,6 +4,7 @@ import {CgProfile} from "react-icons/cg";
 import {AiOutlineHome, AiOutlineShoppingCart} from "react-icons/ai";
 import {BiCategory} from "react-icons/bi";
 import Carrier from "../../assets/memo.png";
+import {Link} from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -13,28 +14,30 @@ const Navigation = () => {
       </div>
       <ul className="flex flex-col flex-1 mt-10">
         <li className=" text-md p-3">
-          <a href="home.asp">
+          <Link to="/">
             <AiOutlineHome size="30" />
-          </a>
+          </Link>
         </li>
         <li className=" text-md p-3">
-          <a href="category.asp">
+          <Link to="/category">
             <BiCategory size="30" />
-          </a>
+          </Link>
         </li>
         <li className=" text-md p-3">
-          <a href="carrier.asp">
+          <Link to="/carrier">
             <img src={Carrier} width="30" alt="" />
-          </a>
+          </Link>
         </li>
         <li className=" text-md p-3">
-          <a href="cart.asp">
+          <Link to="/cart">
             <AiOutlineShoppingCart size="30" />
-          </a>
+          </Link>
         </li>
       </ul>
       <div className="flex items-center">
-        <CgProfile className="" size="35" />
+        <Link to={"/profile"}>
+          <CgProfile className="" size="35" />
+        </Link>
       </div>
     </div>
   );

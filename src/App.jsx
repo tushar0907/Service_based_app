@@ -1,10 +1,8 @@
 import "./App.css";
 import Navigation from "./components/common/Navigation";
-import Home from "./pages/home";
-import Profile from "./pages/profile";
-import Category from "./pages/category";
-import Vehicle from "./pages/Vehicle";
+import Router from "./routes";
 import React from "react";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
   const [currentHeight, setCurrentHeight] = React.useState(0);
@@ -16,17 +14,16 @@ function App() {
     });
   }, []);
   return (
-    <div className="flex" style={{height: currentHeight}}>
-      <div className="w-20 h-full">
-        <Navigation />
+    <BrowserRouter>
+      <div className="flex" style={{height: currentHeight}}>
+        <div className="w-20 h-full">
+          <Navigation />
+        </div>
+        <div className="flex overflow-y-auto justify-center w-full">
+          <Router />
+        </div>
       </div>
-      <div className="flex overflow-y-auto justify-center w-full">
-        {/* <Home /> */}
-        {/* <Profile /> */}
-        {/* <Category /> */}
-        <Vehicle />
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

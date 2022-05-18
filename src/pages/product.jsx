@@ -2,7 +2,7 @@ import React from "react";
 import Top from "../components/VehicleCleaning/Top";
 import Body from "../components/VehicleCleaning/Body";
 
-const Vehicle = () => {
+const Product = () => {
   return (
     <div className="flex flex-col w-full items-center">
       <Top />
@@ -11,4 +11,4 @@ const Vehicle = () => {
   );
 };
 
-export default Vehicle;
+export default Product;

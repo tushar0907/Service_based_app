@@ -15,9 +15,9 @@ const Body = () => {
         <div className="flex flex-1 flex-col items-start font-bold text-lg justify-center mr-5">
           <p>₹ 10,000</p>
         </div>
-        <div className="flex cursor-pointer flex-1 justify-center items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F] to-[#F1Ad10]">
+        <button className="flex cursor-pointer flex-1 justify-center items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F] to-[#F1Ad10]">
           Add to Cart
-        </div>
+        </button>
       </div>
     </div>
   );
