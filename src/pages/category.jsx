@@ -9,13 +9,19 @@ const Category = () => {
   const [subCategories, setSubCategories] = React.useState([]);
   const [categoryLoading, setCategoryLoading] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [nextLink, setNextLink] = React.useState(null);
 
   React.useEffect(() => {
     const fetchCatgories = async () => {
       setCategoryLoading(true);
       await axios
         .get(BASE_URL + "/rest/categories")
-        .then((res) => setCategories(res.data.results))
+        .then((res) => {
+          setCategories(res.data.results);
+          if (res.data.next) {
+            setNextLink(res.data.next);
+          }
+        })
         .finally(() => setCategoryLoading(false));
     };
     fetchCatgories();
@@ -29,11 +35,12 @@ const Category = () => {
   };
 
   return (
-    <div className="flex w-full h-3/5 flex-col">
+    <div className="flex w-4/5 lg:w-7/12 h-3/5 flex-col">
       <MainCategory
         fetchSubCategories={loadSubCategories}
         categories={categories}
         isLoading={categoryLoading}
+        nextLink={nextLink}
       />
       <SubCategory isLoading={isLoading} subCategories={subCategories} />
     </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 const CartOffers = () => {
   return (
-    <div className="flex font-worksans -ml-10 flex-col mt-56 flex-1 w-2/3">
-      <div className="flex faont-medium text-lg">Special Offers</div>
+    <div className="flex font-worksans flex-col mt-56 flex-1 w-3/4">
+      <div className="flex font-medium pb-3 pt-5 text-lg">Special Offers</div>
       <div className="flex flex-1 pt-6 justify-around">
         <div className="flex p-4 flex-col border-2 border-[#FCB512] rounded-xl w-96 h-40">
           <div className="flex font-bold text-lg">
@@ -28,17 +28,19 @@ const CartOffers = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full h-64 mt-8 bg-red-700">
-        <div className="flex">
+      <div className="flex border-b flex-col w-full h-56 mt-8">
+        <div className="flex font-bold text-lg pt-5 pb-3">
           <p>Instructions</p>
         </div>
         <div className="flex">
           <p>
             <ul>
-              <li>1.sds</li>
-              <li>sdsd</li>
-              <li>sdsd</li>
-              <li>sdsd</li>
+              <li>1.Ac volutpat odio odio et rhoncus.</li>
+              <li>
+                2.Lectus mauris pharetra posuere dignissim luctus on faucibis
+                sed.
+              </li>
+              <li>3. Vitae elite ante et eget in ultrices proin.</li>
             </ul>
           </p>
         </div>

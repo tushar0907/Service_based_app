@@ -2,7 +2,7 @@ import React from "react";
 
 const CartDetails = () => {
   return (
-    <div className="flex flex-1 mr-32 pt-5 font-worksans items-start mt-20 flex-col w-3/5 h-32">
+    <div className="flex flex-1 pt-5 font-worksans items-start mt-20 flex-col w-3/4 h-32">
       <div className="flex font-bold text-lg">
         {" "}
         Purus habitant lectus maecenas

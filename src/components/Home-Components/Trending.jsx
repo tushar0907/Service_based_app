@@ -2,7 +2,7 @@ import React from "react";
 
 const Trending = () => {
   return (
-    <div className="flex font-worksans justify-center mt-10 flex-col h-72">
+    <div className="flex font-worksans overflow-x-scroll justify-center mt-10 flex-col h-72">
       <div className="flex text-lg font-bold py-3">Trending Services</div>
       <div className="flex opacity-20 pb-1">Most used Services around you</div>
       <div className="flex flex-1 mt-5">

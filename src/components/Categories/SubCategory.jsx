@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const SubCategory = (props) => {
   return (
@@ -10,14 +11,15 @@ const SubCategory = (props) => {
         {props.isLoading
           ? null
           : props.subCategories.map((sub) => (
-              <div
+              <Link
+                to={`/products/${sub.name}/${sub.scid}`}
                 key={sub.name + sub.scid}
                 className="flex items-center flex-col">
                 <div className="flex justify-center items-center w-40 h-40 border-4 border-[#FCB512] rounded-xl">
                   <img className="h-20" src={sub.image} alt="construction" />
                 </div>
                 {sub.name}
-              </div>
+              </Link>
             ))}
       </div>
     </div>

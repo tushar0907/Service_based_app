@@ -21,7 +21,7 @@ const data = [
   },
 ];
 
-const FAQs = () => {
+const FAQ = () => {
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -31,14 +31,14 @@ const FAQs = () => {
     setSelected(i);
   };
   return (
-    <div className="flex flex-1 font-worksans flex-col mt-8 w-3/4">
-      <div className="flex font-medium pb-4">
+    <div className="flex flex-1 font-worksans flex-col mt-20 p-10 w-full">
+      <div className="flex justify-center items-center font-medium pb-4">
         <p>Frequently Asked Questions</p>
       </div>
-      <div className="flex flex-1">
+      <div className="flex ml-auto mr-auto pl-20 flex-1">
         <div className="accordion">
           {data.map((item, i) => (
-            <div className="w-2/3 mx-5 border rounded-xl p-5 mb-3">
+            <div className="w-full mx-5 border rounded-xl p-5 mb-3">
               <div
                 className=" flex justify-between items-center"
                 onClick={() => toggle(i)}>
@@ -54,16 +54,8 @@ const FAQs = () => {
           ))}
         </div>
       </div>
-      <div className="flex font-medium flex-1 mx-16 w-1/2 p-4 rounded-xl mb-3 bg-gradient-to-r from-[#FFD36F] to-[#F1AD10]">
-        <div className="flex justify-center items-end flex-1">
-          <p>10,000</p>
-        </div>
-        <button className="flex w-full font-bold flex-1">
-          <p>Add to Cart</p>
-        </button>
-      </div>
     </div>
   );
 };
 
-export default FAQs;
+export default FAQ;
