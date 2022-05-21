@@ -1,6 +1,13 @@
 import React from "react";
+import {useSelector, useDispatch} from "react-redux";
+import {addItemInCart} from "../../context/cart";
+import {useSnackbar} from "notistack";
 
 const Body = (props) => {
+  const {enqueueSnackbar} = useSnackbar();
+  // const state = useSelector()
+  const dispatch = useDispatch();
+
   return props.products.map((product) => (
     <div
       key={product.image}
@@ -16,7 +23,12 @@ const Body = (props) => {
         <div className="flex flex-1 flex-col items-start font-bold text-lg justify-center mr-5">
           <p>₹ {product.service_price}</p>
         </div>
-        <button className="flex cursor-pointer flex-1 justify-end items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F] p-3 to-[#F1Ad10]">
+        <button
+          onClick={() => {
+            dispatch(addItemInCart(product));
+            enqueueSnackbar("Item added to cart");
+          }}
+          className="flex cursor-pointer flex-1 justify-end items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F] p-3 to-[#F1Ad10]">
           Add to Cart
         </button>
       </div>

@@ -22,15 +22,21 @@ const Schedule = () => {
   }, []);
   return (
     <div className="flex justify-center font-worksans">
-      <div className="flex flex-col w-full p-8 h-72">
+      <div className="flex flex-col w-full p-8 h-80">
         <div className="flex text-lg font-bold p-2">Scheduled Services</div>
         <div className="flex flex-1 justify-around mt-5 overflow-x-auto">
           {scheduleServices.map((item) => (
             <div
               key={item.category + item.sid}
-              className="flex justify-around p-4 w-60 flex-col items-center rounded-lg mr-4 bg-yellow-100">
-              <img src={item.image} className="rounded-lg" alt="guard" />
-              <div className="flex pt-2 font-medium text-center">
+              className="flex h-auto justify-center p-4 w-full flex-col items-center rounded-lg mr-4 bg-yellow-100">
+              <div className="flex">
+                <img
+                  src={item.image}
+                  className="w-32 h-32 rounded-lg"
+                  alt="guard"
+                />
+              </div>
+              <div className="flex pt-2 h-40 -mt-5 items-start w-full font-medium text-sm text-center">
                 {item.name}
               </div>
             </div>

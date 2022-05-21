@@ -11,6 +11,11 @@ import PriceDetails from "../pages/PriceDetails";
 import ReferPage from "../pages/Referpage";
 import CoupanPage from "../pages/CouponPage";
 import CarrierPage from "../pages/CarrierPage";
+import OrderDetails from "../pages/OrderDetails";
+import BalancePage from "../pages/BalancePage";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
+import VerifyPage from "../pages/VerifyPage";
 
 export default function () {
   return (
@@ -26,6 +31,11 @@ export default function () {
       <Route path="/couponpages" element={<CoupanPage />} />
       <Route path="/referpage" element={<ReferPage />} />
       <Route path="/carrier" element={<CarrierPage />} />
+      <Route path="/orderdetails" element={<OrderDetails />} />
+      <Route path="/balancepage" element={<BalancePage />} />
+      <Route path="/loginpage" element={<LoginPage />} />
+      <Route path="/registerpage" element={<RegisterPage />} />
+      <Route path="/verifypage" element={<VerifyPage />} />
     </Routes>
   );
 }

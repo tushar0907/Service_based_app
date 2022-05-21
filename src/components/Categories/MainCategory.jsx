@@ -7,7 +7,7 @@ const MainCategory = (props) => {
     await axios.get(link).then((res) => "");
   };
   return (
-    <div className="flex flex-col flex-1 border-b border-[#FCB512]">
+    <div className="flex flex-col cursor-pointer flex-1 border-b border-[#FCB512]">
       <div className="flex font-worksans font-medium text-lg p-6 pl-8">
         Categories
       </div>
