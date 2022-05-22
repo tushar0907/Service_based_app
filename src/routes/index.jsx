@@ -32,10 +32,10 @@ export default function () {
       <Route path="/referpage" element={<ReferPage />} />
       <Route path="/carrier" element={<CarrierPage />} />
       <Route path="/orderdetails" element={<OrderDetails />} />
-      <Route path="/balancepage" element={<BalancePage />} />
-      <Route path="/loginpage" element={<LoginPage />} />
-      <Route path="/registerpage" element={<RegisterPage />} />
-      <Route path="/verifypage" element={<VerifyPage />} />
+      <Route path="/balance" element={<BalancePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/verify" element={<VerifyPage />} />
     </Routes>
   );
 }
