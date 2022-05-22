@@ -4,10 +4,10 @@ const OtpArea = () => {
   return (
     <div className="flex flex-col items-center w-full">
       <div className="flex w-3/5 drop-shadow-lg justify-around">
-        <input type="number" className="border h-20 w-20 rounded-lg" />
-        <input type="number" className="border h-20 w-20 rounded-lg" />
-        <input type="number" className="border h-20 w-20 rounded-lg" />
-        <input type="number" className="border h-20 w-20 rounded-lg" />
+        <input
+          type="number"
+          className="border text-5xl font-bold text-center h-20 w-44 rounded-lg"
+        />
       </div>
       <div className="flex my-6 justify-end w-3/5">
         <div className="flex">

@@ -28,7 +28,7 @@ const Body = (props) => {
             dispatch(addItemInCart(product));
             enqueueSnackbar("Item added to cart");
           }}
-          className="flex cursor-pointer flex-1 justify-end items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F] p-3 to-[#F1Ad10]">
+          className="flex cursor-pointer flex-1 justify-center items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F] p-3 to-[#F1Ad10]">
           Add to Cart
         </button>
       </div>

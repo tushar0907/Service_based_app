@@ -36,7 +36,7 @@ const Schedule = () => {
                   alt="guard"
                 />
               </div>
-              <div className="flex pt-2 h-40 -mt-5 items-start w-full font-medium text-sm text-center">
+              <div className="flex pt-2 h-40 -mt-5 items-start justify-center w-full font-medium text-sm text-center">
                 {item.name}
               </div>
             </div>
