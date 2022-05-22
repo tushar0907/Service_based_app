@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Text = () => {
+  const ph_number = useSelector(state => state.login.ph_number)
   return (
     <div className="flex mt-16 items-center flex-col w-full">
       <div className="flex items-center flex-col">
@@ -9,7 +11,10 @@ const Text = () => {
         </h1>
         <p className="flex w-3/4 pl-10 pb-10 text-lg font-medium p-2">
           Please enter the OTP that we have sent to your phone number ending
-          with *****7683
+          with *****
+          {ph_number
+            ?.split("")
+            .slice(ph_number.split("").lenght - 5, ph_number.split("").lenght-1)}
         </p>
       </div>
       <div className="flex">

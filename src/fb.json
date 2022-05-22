@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "159817945860",
+    "project_id": "s8vrittih-b6dfe",
+    "storage_bucket": "s8vrittih-b6dfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159817945860:android:b8416e165e19f03acfb651",
+        "android_client_info": {
+          "package_name": "com.vrittih"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159817945860-lci7uh4ajmda7gs1v84ac2og78ldmcbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaK5sxhCEa5Ei01uzgqnFEgUrYZRvGSy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159817945860-lci7uh4ajmda7gs1v84ac2og78ldmcbp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
