@@ -1,14 +1,18 @@
 import React from "react";
-import { GrFormClose } from "react-icons/gr";
-import { auth, firebase } from "../../firebasec";
-import { useDispatch, useSelector } from "react-redux";
-import { setPhNumber, setResult } from "../../context/login";
-import { useNavigate } from "react-router-dom";
+import {GrFormClose} from "react-icons/gr";
+import {auth, firebase} from "../../firebasec";
+import {useDispatch, useSelector} from "react-redux";
+import {setPhNumber, setResult, setType} from "../../context/login";
+import {useNavigate} from "react-router-dom";
 
 const LoginArea = () => {
   const ph_number = useSelector((state) => state.login.ph_number);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  React.useEffect(() => {
+    dispatch(setType("login"));
+  }, []);
 
   const signInWithPhoneNumber = () => {
     if (ph_number === "" || ph_number.length < 10) return;
@@ -46,8 +50,7 @@ const LoginArea = () => {
       <div className="flex flex-col h-56  items-center justify-around w-full">
         <button
           onClick={signInWithPhoneNumber}
-          className="flex w-96 h-12 justify-center items-center bg-gradient-to-r from-[#FFD36F] to-[#F1AD10] rounded-lg font-medium text-md"
-        >
+          className="flex w-96 h-12 justify-center items-center bg-gradient-to-r from-[#FFD36F] to-[#F1AD10] rounded-lg font-medium text-md">
           Send OTP
         </button>
         <div className="flex w-80 h-12 items-center justify-center border-b">

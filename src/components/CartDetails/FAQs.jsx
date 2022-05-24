@@ -4,8 +4,9 @@ const FAQs = ({faqs, price}) => {
   const [faq] = React.useState([]);
   return (
     <div className="flex flex-1 font-worksans flex-col mt-8 w-3/4">
-      <div className="flex font-medium pb-4">
+      <div className="flex flex-col font-medium pb-4">
         <p>Frequently Asked Questions</p>
+        <p className="items-center flex my-8 justify-start">No FAQs yet</p>
       </div>
       {faq.map(() => (
         <div className="flex flex-1">

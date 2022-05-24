@@ -2,7 +2,7 @@ import React from "react";
 
 const Advertise = () => {
   return (
-    <div className="flex p-7 flex-col font-worksans pt-5 h-64 mt-20 bg-[#FFE9B8] rounded-lg">
+    <div className="flex p-7 flex-col font-worksans pt-5 h-64 mt-20 bg-[#FFE9B8] rounded-">
       <div className="flex pl-5 pt-4 justify-start items-center text-2xl font-bold">
         Earn $ 250 for every Friend you Refer
       </div>

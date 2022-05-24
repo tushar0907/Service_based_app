@@ -1,7 +1,7 @@
 import React from "react";
 import MenuPanel from "../components/Home-Components/MenuPanel";
 import Search from "../components/Home-Components/Search";
-import Quotes from "../components/Home-Components/Quotes";
+
 import Schedule from "../components/Home-Components/Schedule";
 import Value from "../components/Home-Components/ValueService";
 import MidBanner from "../components/Home-Components/MidBanner";
@@ -16,7 +16,7 @@ function Home() {
       <div className=" w-full px-5 xl:px-0 xl:w-2/3">
         {/* <MenuPanel /> */}
         <Search />
-        <Quotes />
+
         <Schedule />
         <Value />
         <MidBanner

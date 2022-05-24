@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import {CgProfile} from "react-icons/cg";
-import {Link} from "react-router-dom";
 
 const MenuPanel = () => {
   return (

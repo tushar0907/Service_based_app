@@ -5,8 +5,14 @@ import {FiSettings} from "react-icons/fi";
 import {FcViewDetails} from "react-icons/fc";
 import {FiHelpCircle} from "react-icons/fi";
 import {BiExit} from "react-icons/bi";
+import {useNavigate} from "react-router-dom";
 
 const Menu = ({name, number}) => {
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.clear();
+    navigate("/");
+  };
   return (
     <div className="flex pt-5 justify-end w-1/4 flex-col drop-shadow-2xl">
       <div className="flex justify-center items-start pl-6 h-full flex-col">
@@ -14,7 +20,7 @@ const Menu = ({name, number}) => {
           Hello,&nbsp;&nbsp;<p className="font-bold">{name}</p>
         </div>
         <div className="flex text-lg w-80 h-20 items-center justify-start">
-          +91&nbsp;&nbsp;<p>{number}</p>
+          <p>{number}</p>
         </div>
       </div>
       <div>
@@ -49,9 +55,14 @@ const Menu = ({name, number}) => {
           </div>
         </div>
       </div>
-      <div className="flex font-medium justify-start p-20 items-center text-2xl h-60">
-        <BiExit size="60" />
-        <p>Logout</p>
+      <div
+        onClick={() => logout()}
+        className="flex font-medium justify-start p-20 items-center text-2xl h-60">
+        <p className="flex cursor-pointer">
+          {" "}
+          <BiExit size="30" />
+          Logout
+        </p>
       </div>
     </div>
   );

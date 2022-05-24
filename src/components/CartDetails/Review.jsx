@@ -5,8 +5,9 @@ const Review = ({reviews}) => {
 
   return (
     <div className="flex flex-1 w-3/4 pt-10 items-start flex-col">
-      <div className="flex pb-6 w-2/3 font-medium">
+      <div className="flex flex-col pb-6 w-2/3 font-medium">
         <p>Customer Reviews Near You</p>
+        <p className="items-center flex my-12 justify-start">No Reviews yet</p>
       </div>
       {review.map(() => (
         <div className="flex w-3/4 p-3 flex-1 overflow-scroll border rounded-xl flex-col">

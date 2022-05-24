@@ -2,37 +2,44 @@ import React from "react";
 import {GrFormClose} from "react-icons/gr";
 import {CgProfile} from "react-icons/cg";
 import {BASE_URL} from "../../base";
+import {useDispatch, useSelector} from "react-redux";
+import {auth, firebase} from "../../firebasec";
+import {setType, setPhNumber, setName, setResult} from "../../context/login";
+import {useNavigate} from "react-router-dom";
 
 const BottomArea = () => {
-  const [name, setName] = React.useState("");
-  const [number, setNumber] = React.useState("");
+  const dispatch = useDispatch();
+  const {ph_number, name} = useSelector((state) => state.login);
+  const navigate = useNavigate();
+  const [isChecked, setIsChecked] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
 
-  const saveDetails = () => {
-    var axios = require("axios");
-    var data = JSON.stringify({
-      username: "prabhat0312",
-      ph_number: number,
-      name: name,
-    });
+  React.useEffect(() => {
+    dispatch(setType("register"));
+  }, []);
 
-    var config = {
-      method: "post",
-      url: BASE_URL + "/auth/register",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: data,
-    };
-
-    axios(config)
-      .then(function (response) {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    console.warn(name, number);
+  const signInWithPhoneNumber = () => {
+    try {
+      setIsLoading(true);
+      if (ph_number === "" || ph_number.length < 10) return;
+      setIsLoading(false);
+      let verify = new firebase.auth.RecaptchaVerifier("recaptcha-container");
+      setIsLoading(true);
+      auth
+        .signInWithPhoneNumber("+91" + ph_number, verify)
+        .then((result) => {
+          dispatch(setResult(result));
+          navigate("/verify");
+        })
+        .catch((err) => {
+          alert(err);
+          window.location.reload();
+        });
+    } catch (err) {
+      setIsLoading(false);
+    }
   };
+
   function ClearFields() {
     document.getElementById("textfield1").value = "";
     document.getElementById("textfield2").value = "";
@@ -49,7 +56,7 @@ const BottomArea = () => {
             id="textfield1"
             className="border w-96"
             placeholder="Enter FULL NAME"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => dispatch(setName(e.target.value))}
             value={name}
           />
           <GrFormClose
@@ -66,8 +73,8 @@ const BottomArea = () => {
             id="textfield2"
             className="border w-96"
             placeholder="Enter Mobile Number"
-            onChange={(e) => setNumber(e.target.value)}
-            value={number}
+            onChange={(e) => dispatch(setPhNumber(e.target.value))}
+            value={ph_number}
           />
           <GrFormClose
             onClick={ClearFields}
@@ -75,22 +82,31 @@ const BottomArea = () => {
           />
         </div>
         <div className="flex w-72">
-          <input type="checkbox" className="flex h-10 w-10 mx-6" />
+          <input
+            value={isChecked}
+            type="checkbox"
+            onChange={(e) => setIsChecked(e.target.value)}
+            className="flex h-10 w-10 mx-6"
+          />
           <p>
             By checking you agree to our Terms and Condition and Privacy Policy
           </p>
         </div>
+
+        <div id="recaptcha-container"></div>
       </div>
       <div className="flex flex-col h-56  items-center justify-around w-full">
-        <button className="flex w-96 h-12 justify-center items-center bg-gradient-to-r from-[#FFD36F] to-[#F1AD10] rounded-lg font-medium text-md">
+        <button
+          onClick={() => signInWithPhoneNumber()}
+          className={`flex ${
+            isLoading ? "animate-pulse" : ""
+          } w-96 h-10 items-center justify-center rounded-lg border-2 bg-gradient-to-r from-[#FFD36F] to-[#F1AD10]  font-medium text-md`}>
           Send OTP
         </button>
         <div className="flex w-80 h-12 items-center justify-center border-b">
           OR NEW HERE?
         </div>
-        <button
-          onClick={saveDetails}
-          className="flex w-96 h-10 items-center justify-center rounded-lg border-2 border-[#FCB512] text-[#FCB512] font-medium text-md">
+        <button className="flex w-96 h-12 justify-center border-[#FCB512] text-[#FCB512] items-center rounded-lg font-medium text-md">
           LOGIN
         </button>
       </div>

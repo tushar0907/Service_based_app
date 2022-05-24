@@ -3,25 +3,38 @@ import Information from "../components/Profile/Information";
 import Menu from "../components/Profile/Menu";
 import axios from "axios";
 import {BASE_URL} from "../base";
+import {useNavigate} from "react-router-dom";
 
 const Profile = () => {
   const [profile, setProfile] = React.useState({});
+  const navigate = useNavigate();
+
   React.useEffect(() => {
-    const getInfo = async () => {
-      var config = {
-        method: "get",
-        url: BASE_URL + "/auth/details",
+    const token = localStorage.getItem("token");
+    if (token) {
+      const getInfo = async () => {
+        var config = {
+          method: "GET",
+          url: BASE_URL + "/auth/details",
+          headers: {
+            Authorization: "Token " + token,
+          },
+        };
+        await axios(config)
+          .then((res) => {
+            setProfile(res.data);
+          })
+          .catch(function (error) {
+            localStorage.clear();
+            navigate("/login");
+          });
       };
-      await axios(config)
-        .then((res) => {
-          setProfile(res.data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    };
-    getInfo();
+      getInfo();
+    } else {
+      navigate("/login");
+    }
   }, []);
+
   return (
     <div className="flex w-full">
       <Menu name={profile.name} number={profile.ph_number} />
