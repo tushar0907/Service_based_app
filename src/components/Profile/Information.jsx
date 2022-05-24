@@ -3,17 +3,18 @@ import {MdArrowForwardIos} from "react-icons/md";
 import memo from "../../assets/memo.png";
 import coupon from "../../assets/coupon.png";
 import wallet from "../../assets/wallet.png";
+import {Link} from "react-router-dom";
 
 const Information = () => {
   return (
     <div className="flex flex-1 flex-col">
       <div className="flex flex-1 font-medium text-lg justify-around pl-10 ml-12  items-center w-10/12 border-b border-black">
-        <div>
+        <Link to={"/orderdetails"}>
           <div className="flex bg-[#FCB512] h-24 items-center justify-center w-24 rounded-full">
             <img src={memo} style={{height: "30%", width: "30%"}} alt="guard" />
           </div>
-          <p>Orders</p>
-        </div>
+          <p className="flex items-center justify-center">Orders</p>
+        </Link>
 
         <div className="flex">
           <div>
@@ -24,11 +25,11 @@ const Information = () => {
                 alt="guard"
               />
             </div>
-            <p>Wallet</p>
+            <p className="flex items-center justify-center">Wallet</p>
           </div>
         </div>
         <div className="flex flex-col">
-          <div>
+          <Link to={"/coupon"}>
             <div className="flex bg-[#FCB512] h-24 items-center justify-center w-24 rounded-full">
               <img
                 src={coupon}
@@ -36,8 +37,8 @@ const Information = () => {
                 alt="guard"
               />
             </div>
-            <p>Coupons</p>
-          </div>
+            <p className="flex items-center justify-center">Coupons</p>
+          </Link>
         </div>
       </div>
       <div className="flex flex-1 justify-center">

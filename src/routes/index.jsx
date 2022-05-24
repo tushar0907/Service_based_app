@@ -24,11 +24,11 @@ export default function () {
       <Route path="/products/:subcategory/:scid" element={<Product />} />
       <Route path="/category" element={<Category />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/product" element={<ProductDesign />} />
+      <Route path="/product/:sid" element={<ProductDesign />} />
       <Route path="/mycart" element={<MyCart />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/pricedetails" element={<PriceDetails />} />
-      <Route path="/couponpages" element={<CoupanPage />} />
+      <Route path="/coupon" element={<CoupanPage />} />
       <Route path="/referpage" element={<ReferPage />} />
       <Route path="/carrier" element={<CarrierPage />} />
       <Route path="/orderdetails" element={<OrderDetails />} />
