@@ -12,7 +12,7 @@ const Trending = () => {
       };
       await axios(config)
         .then((res) => {
-          setTrendingServices(res.data);
+          setTrendingServices(res.data.slice(0, 5));
         })
         .catch(function (error) {
           console.log(error);
@@ -21,28 +21,25 @@ const Trending = () => {
     getTrends();
   }, []);
   return (
-    <div className="flex font-worksans p-2 overflow-x-scroll w-full mt-10 flex-col h-3/6">
+    <div className="boxx flex font-worksans p-2 overflow-x-scroll w-full mt-10 flex-col h-3/6">
       <div className="flex text-lg font-bold py-3">Trending Services</div>
       <div className="flex opacity-20 pb-1">Most used Services around you</div>
       <div className="flex flex-1 mt-5">
         {trendingServices.map((item) => (
-          <div
-            key={item.category + item.sid}
-            className="flex-none w-[30rem] h-5/6 mr-2 rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-200">
-            <div className="flex flex-1">
-              <div className="flex my-2">
-                <img
-                  className="border mt-1 pl-1 rounded-l-lg"
-                  src={item.image}
-                  alt="person"
-                  width="200"
-                />
-              </div>
-              <div className="flex flex-1 pt-3 flex-col p-3">
-                <div className="text-left opacity-50">Trending</div>
-                <div className="font-bold text-left">{item.name}</div>
-                <div className="text-left font-medium border-b">
-                  {item.description}
+          <div className="card flex justify-center font-worksans">
+            <div className="flex flex-col w-60 h-60">
+              <div className="flex flex-1 justify-around mt-5">
+                <div
+                  key={item.category + item.sid}
+                  className="flex h-auto justify-center  w-full flex-col items-center rounded-lg mr-4 bg-yellow-100">
+                  <img
+                    className="w-32 mt-7 h-32 rounded-lg"
+                    src={item.image}
+                    alt="guard"
+                  />
+                  <div className="flex font-bold pt-2 h-20 items-start justify-center w-full text-sm text-center">
+                    {item.name}
+                  </div>
                 </div>
               </div>
             </div>

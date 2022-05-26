@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const FAQs = ({faqs, price}) => {
   const [faq] = React.useState([]);
@@ -21,15 +22,6 @@ const FAQs = ({faqs, price}) => {
           </div>
         </div>
       ))}
-
-      <div className="flex font-medium flex-1 mx-16 w-1/2 p-4 rounded-xl mb-3 bg-gradient-to-r from-[#FFD36F] to-[#F1AD10]">
-        <div className="flex justify-center items-end flex-1">
-          <p> ₹ {price}</p>
-        </div>
-        <button className="flex w-full font-bold flex-1">
-          <p>Add to Cart</p>
-        </button>
-      </div>
     </div>
   );
 };

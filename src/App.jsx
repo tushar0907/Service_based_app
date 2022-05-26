@@ -17,7 +17,7 @@ function App() {
   return (
     <SnackbarProvider maxSnack={3}>
       <BrowserRouter>
-        <div className="flex" style={{height: currentHeight}}>
+        <div className="flex bg-[#f4e3c9]" style={{height: currentHeight}}>
           <div className="w-20 h-full">
             <Navigation />
           </div>

@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <div className="flex h-full flex-col p-3 bg-gray-200 items-center">
+    <div className="flex h-full flex-col p-3 bg-[#eecea2] items-center">
       <div className="flex">
         <img className="flex" src={logo} width="100" alt="logo" />
       </div>

@@ -21,7 +21,7 @@ const ValueService = () => {
     getCategory();
   }, []);
   return (
-    <div className="flex justify-center font-worksans">
+    <div className="card flex justify-center font-worksans">
       <div className="flex flex-col w-full p-8 h-80">
         <div className="flex text-lg font-bold p-2">Value Added Services</div>
         <div className="flex flex-1 justify-around mt-5 overflow-x-auto">

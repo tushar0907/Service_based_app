@@ -9,21 +9,26 @@ const payment = () => {
       </div>
       <div className="flex flex-col p-6 flex-1">
         <div className="flex flex-1 text-md pb-4 h-20 border-b border-[#FCB512]">
-          <BsCircle />
-          &nbsp;&nbsp;<p>Citi Bank Credit Card ****8443</p>
+          <input type="radio" />
+          &nbsp;&nbsp;
+          <p className="flex cursor-pointer items-start">
+            Citi Bank Credit Card ****8443
+          </p>
         </div>
         <div className="flex flex-1 pt-8">
           {" "}
           <div className="flex flex-1 text-md h-10 border-b border-[#FCB512]">
-            <BsCircle />
-            &nbsp;&nbsp;<p>Other UPI Apps</p>
+            <input type="radio" />
+            &nbsp;&nbsp;
+            <p className="flex cursor-pointer items-start">Other UPI Apps</p>
           </div>
         </div>
         <div className="flex flex-1 pt-8">
           {" "}
           <div className="flex flex-1 text-md h-10 border-b border-[#FCB512]">
-            <BsCircle />
-            &nbsp;&nbsp;<p>Pay After Service</p>
+            <input type="radio" classname="flex items-end" />
+            &nbsp;&nbsp;
+            <p className="flex cursor-pointer items-start">Pay After Service</p>
           </div>
         </div>
       </div>

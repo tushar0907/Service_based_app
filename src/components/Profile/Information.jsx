@@ -17,16 +17,18 @@ const Information = () => {
         </Link>
 
         <div className="flex">
-          <div>
-            <div className="flex bg-[#FCB512] h-24 items-center justify-center w-24 rounded-full">
-              <img
-                src={wallet}
-                style={{height: "30%", width: "30%"}}
-                alt="guard"
-              />
+          <Link to={"/balance"}>
+            <div>
+              <div className="flex cursor-pointer bg-[#FCB512] h-24 items-center justify-center w-24 rounded-full">
+                <img
+                  src={wallet}
+                  style={{height: "30%", width: "30%"}}
+                  alt="guard"
+                />
+              </div>
+              <p className="flex items-center justify-center">Wallet</p>
             </div>
-            <p className="flex items-center justify-center">Wallet</p>
-          </div>
+          </Link>
         </div>
         <div className="flex flex-col">
           <Link to={"/coupon"}>
@@ -41,21 +43,25 @@ const Information = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-1 justify-center">
-        <div className="flex w-7/12 mt-24 bg-yellow-100 rounded-xl h-24 items-center">
-          <div className="flex bg-[#FCB512] text-4xl font-bold h-20 items-center justify-center w-20  rounded-full">
-            ₹
+      <Link to={"/refer"}>
+        <div className="flex flex-1 justify-center">
+          <div className="flex w-7/12 mt-24 bg-yellow-100 rounded-xl h-24 items-center">
+            <div className="flex bg-[#FCB512] text-4xl font-bold h-20 items-center justify-center w-20  rounded-full">
+              ₹
+            </div>
+
+            <div className="flex pl-7 flex-col font-medium text-2xl">
+              <p>Refer & Earn</p>
+              <p>₹ 462</p>
+            </div>
+
+            <div className="flex flex-1 justify-end mb-auto">
+              {" "}
+              <MdArrowForwardIos size="60" className="pl-2 pt-8" />
+            </div>
           </div>
-          <div className="flex pl-7 flex-col font-medium text-2xl">
-            <p>Refer & Earn</p>
-            <p>₹ 462</p>
-          </div>
-          <div className="flex flex-1 justify-end mb-auto">
-            {" "}
-            <MdArrowForwardIos size="60" className="pl-2 pt-8" />
-          </div>
-        </div>
-      </div>
+        </div>{" "}
+      </Link>
       <div className="flex flex-1 bg-white"></div>
     </div>
   );
