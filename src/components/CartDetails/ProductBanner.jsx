@@ -8,7 +8,7 @@ const CartBanner = ({image, name}) => {
       </div>
       <div className="flex flex-1 justify-left items-center">
         <img
-          className="h-96 w-4/5 rounded-lg lg:rounded-3xl"
+          className="h-96 w-4/5 rounded-lg md:rounded-3xl lg:rounded-3xl"
           src={image}
           alt="construction"
         />

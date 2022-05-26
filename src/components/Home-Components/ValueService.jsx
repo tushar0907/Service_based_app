@@ -22,7 +22,7 @@ const ValueService = () => {
   }, []);
   return (
     <div className="card flex justify-center font-worksans">
-      <div className="flex flex-col w-full p-8 h-80">
+      <div className="flex flex-col w-full p-8 lg:h-80 md:h-72 md:w-full">
         <div className="flex text-lg font-bold p-2">Value Added Services</div>
         <div className="flex flex-1 justify-around mt-5 overflow-x-auto">
           {valueServices.map((item) => (
@@ -35,7 +35,7 @@ const ValueService = () => {
                 alt="guard"
               />
               <div className="flex pt-2 h-40 items-start justify-center w-full font-medium text-sm text-center">
-                {item.name}
+                {item.name.slice(0, 15)}
               </div>
             </div>
           ))}

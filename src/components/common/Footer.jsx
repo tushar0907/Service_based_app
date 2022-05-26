@@ -12,24 +12,24 @@ const Footer = () => {
           height="20px"
           alt="logo"
         />
-        <div className="relative ml-auto text-white">
+        <div className="relative ml-auto text-white md:text-sm">
           Vrittih | All Rights reserved| 2021 Copyright
         </div>
       </div>
       <div className="flex flex-1">
         <div className="flex justify-end pt-10 flex-1 text-white text-left p-6 font-bold text-xl">
           <ul>
-            <li className="py-3">Support</li>
-            <li className="py-3">About Us</li>
-            <li className="py-3">Privacy Policy</li>
+            <li className="py-3 md:text-sm">Support</li>
+            <li className="py-3 md:text-sm">About Us</li>
+            <li className="py-3 md:text-sm">Privacy Policy</li>
           </ul>
         </div>
         <div className="flex flex-1">
           <div className="flex justify-start pt-10 flex-1 text-white text-left p-6 font-bold text-xl">
             <ul>
-              <li className="py-3">Terms and Conditions</li>
-              <li className="py-3">Return and refund Policy</li>
-              <li className="py-3">Shipping and Delivery Policy</li>
+              <li className="py-3 md:text-sm">Terms and Conditions</li>
+              <li className="py-3 md:text-sm">Return and refund Policy</li>
+              <li className="py-3 md:text-sm">Shipping and Delivery Policy</li>
             </ul>
           </div>
         </div>

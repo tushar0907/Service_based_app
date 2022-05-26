@@ -27,7 +27,7 @@ const Trending = () => {
       <div className="flex flex-1 mt-5">
         {trendingServices.map((item) => (
           <div className="card flex justify-center font-worksans">
-            <div className="flex flex-col w-60 h-60">
+            <div className="flex flex-col lg:w-60 lg:h-60 md:w-40 md:h-40">
               <div className="flex flex-1 justify-around mt-5">
                 <div
                   key={item.category + item.sid}

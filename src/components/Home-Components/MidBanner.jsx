@@ -35,12 +35,12 @@ const MidBanner = () => {
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <div
-            className="flex p-10 flex-col bg-[length:1650px_460px] bg-no-repeat w-full h-96 rounded-lg"
+            className="flex p-10 flex-col lg:bg-[length:1850px_480px] bg-no-repeat w-full h-96 rounded-lg md:md:bg-[length:950px_360px]"
             style={{
               backgroundImage: `url(${require("../../assets/image2.jpg")})`,
             }}>
             <div className="flex font-bold text-xl text-white h-32 backdrop-opacity-5 backdrop-invert w-52">
-              <div className="flex w-96 text-bg-yellow-100 flex-col items-start flex-1 font-superbold text-5xl">
+              <div className="flex lg:w-96 text-bg-yellow-100 flex-col items-start flex-1 font-superbold lg:text-5xl md:w-80 md:text-3xl md:mt-12">
                 {" "}
                 Comprehensive <p>Car Wash</p>{" "}
               </div>
@@ -63,12 +63,14 @@ const MidBanner = () => {
         </SwiperSlide> */}
         <SwiperSlide>
           <div
-            className="flex p-10 flex-col bg-[length:1650px_460px] bg-no-repeat w-full h-96 rounded-lg"
+            className="flex p-10 flex-col lg:bg-[length:1850px_460px] bg-no-repeat w-full h-96 rounded-lg md:bg-[length:920px_330px]"
             style={{
               backgroundImage: `url(${require("../../assets/image1.jpg")})`,
             }}>
-            <div className="flex text-5xl w-96 mt-20 font-bold text-white h-32 backdrop-opacity-5 backdrop-invert">
-              Well Trained Security Guards
+            <div className="flex lg:text-5xl lg:w-96 mt-20 font-bold text-white lg:h-32 backdrop-opacity-5 backdrop-invert md:h-16 md:text-2xl md:w-60 ">
+              <div className="flex 2xl:-mt-0 lg:text-5xl lg:w-96 mt-20 font-bold text-white lg:h-32 backdrop-opacity-5 backdrop-invert md:h-12 md:text-xl md:w-60 items-start justify-center">
+                <p className="flex"> Well Trained Security Guards</p>
+              </div>
             </div>
           </div>
         </SwiperSlide>

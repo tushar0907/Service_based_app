@@ -50,7 +50,7 @@ const Information = () => {
               ₹
             </div>
 
-            <div className="flex pl-7 flex-col font-medium text-2xl">
+            <div className="flex pl-7 flex-col font-medium lg:text-2xl md:text-md md:font-bold">
               <p>Refer & Earn</p>
               <p>₹ 462</p>
             </div>

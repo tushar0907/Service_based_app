@@ -18,7 +18,7 @@ const BottomBanner = () => {
       <SwiperSlide>
         <div className="flex justify-center items-center h-auto w-full ">
           <div
-            className="bg-center bg-cover bg-no-repeat w-full h-auto rounded-lg"
+            className="bg-center mt-10 bg-cover bg-no-repeat w-full h-auto rounded-lg"
             style={{}}>
             <img
               id="wide"
