@@ -16,9 +16,9 @@ const BottomBanner = () => {
       modules={[Navigation]}
       className="mySwiper">
       <SwiperSlide>
-        <div className="flex justify-center items-center w-full ">
+        <div className="flex justify-center items-center h-auto w-full ">
           <div
-            className="bg-center bg-cover bg-no-repeat w-full h-96 rounded-lg lg:bg-cover"
+            className="bg-center bg-cover bg-no-repeat w-full h-auto rounded-lg"
             style={{}}>
             <img
               id="wide"

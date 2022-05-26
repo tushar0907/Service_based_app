@@ -15,7 +15,7 @@ code {
 
 .swiper {
     width: 100%;
-    height: 50%;
+    height: 40%;
 }
 
 .swiper-slide {
@@ -38,15 +38,37 @@ code {
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: flex;
+    width: 72%;
+    object-fit: contain;
 }
 
-#wide {
-    max-width: 100%;
-    height: auto;
-    width: auto\5;
-    /* ie8 */
+@media only screen and (min-width: 768px) and (max-width: 2300px) {
+    #wide {
+        display: flex;
+        height: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1640px) {
+    .swiper {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media only screen and (min-width: 1641px) and (max-width: 1864px) {
+    .swiper {
+        width: 100%;
+        height: 56%;
+    }
+}
+
+@media only screen and (min-width: 1865px) and (max-width: 3000px) {
+    .swiper {
+        width: 100%;
+        height: 62%;
+    }
 }

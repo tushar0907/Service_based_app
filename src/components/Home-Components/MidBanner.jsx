@@ -63,7 +63,7 @@ const MidBanner = () => {
         </SwiperSlide> */}
         <SwiperSlide>
           <div
-            className="flex p-10 flex-col bg-[length:1250px_460px] bg-no-repeat w-full h-96 rounded-lg"
+            className="flex p-10 flex-col bg-[length:1650px_460px] bg-no-repeat w-full h-96 rounded-lg"
             style={{
               backgroundImage: `url(${require("../../assets/image1.jpg")})`,
             }}>
