@@ -16,18 +16,17 @@ function Home() {
       <div className=" w-full px-5 xl:px-0 xl:w-2/3">
         {/* <MenuPanel /> */}
         <Search />
-
-        <Schedule />
-        <Value />
         <MidBanner
           image={require("../assets/BgBottom.jpg")}
           description={"THis is Description"}
         />
+
+        <Schedule />
+        <Value />
+        <BottomBanner />
+
         <Trending />
-        <MidBanner
-          image={require("../assets/BgEnd.jpg")}
-          description={"THis is Description"}
-        />
+
         <Advertise />
         <Footer />
 
