@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const SubCategory = (props) => {
   return (
-    <div className="flex flex-1 border-b border-[#FCB512]">
+    <div className="flex flex-1 border-b border-[#FCB512] lg:pb-16 lg:justify-center">
       {props.isLoading
         ? null
         : props.subCategories.map((sub) => (
@@ -24,7 +24,9 @@ const SubCategory = (props) => {
                       />
                     </div>
                   </div>
-                  <div className="flex w-24 text-sm">{sub.name}</div>
+                  <div className="flex w-24 text-sm lg:mt-2 lg:w-40">
+                    {sub.name}
+                  </div>
                 </div>
               </div>
             </Link>

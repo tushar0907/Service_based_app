@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, {useRef, useState} from "react";
+import React from "react";
 // Import Swiper React components
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -36,11 +35,11 @@ const MidBanner = () => {
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <div
-            className="flex scale-80 p-10 flex-col bg-[length:1250px_460px] bg-no-repeat w-full h-96 rounded-lg"
+            className="flex p-10 flex-col bg-[length:1650px_460px] bg-no-repeat w-full h-96 rounded-lg"
             style={{
               backgroundImage: `url(${require("../../assets/image2.jpg")})`,
             }}>
-            <div className="flex font-bold text-xl text-white h-32 backdrop-opacity-5 backdrop-invert">
+            <div className="flex font-bold text-xl text-white h-32 backdrop-opacity-5 backdrop-invert w-52">
               <div className="flex w-96 text-bg-yellow-100 flex-col items-start flex-1 font-superbold text-5xl">
                 {" "}
                 Comprehensive <p>Car Wash</p>{" "}

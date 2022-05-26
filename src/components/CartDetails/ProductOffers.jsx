@@ -3,8 +3,10 @@ import React from "react";
 const CartOffers = () => {
   return (
     <div className="flex font-worksans flex-col mt-56 flex-1 w-3/4">
-      <div className="flex font-medium pb-3 pt-5 text-lg">Special Offers</div>
-      <div className="flex flex-1 pt-6 justify-around">
+      <div className="flex font-medium pb-3 pt-5 text-lg lg:pt-40">
+        Special Offers
+      </div>
+      <div className="flex flex-1 pt-6 justify-around ">
         <div className="flex p-4 flex-col border-2 border-[#FCB512] rounded-xl w-96 h-40">
           <div className="flex font-bold text-lg">
             <p>Save 12% on every Order</p>

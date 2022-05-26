@@ -62,7 +62,7 @@ const Information = () => {
           </div>
         </div>{" "}
       </Link>
-      <div className="flex flex-1 bg-white"></div>
+      <div className="flex flex-1"></div>
     </div>
   );
 };

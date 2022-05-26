@@ -11,23 +11,23 @@ const WalletPage = () => {
             src={require("../assets/balance.png")}
           />
         </div>
-        <div className="flex p-4 justify-around w-full overflow-x-scroll">
-          <div className="flex h-16 w-52 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
+        <div className="flex p-4 justify-between w-full overflow-x-scroll">
+          <div className="flex h-16 w-52 md:mr-4 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
             + ₹ 50{" "}
           </div>
-          <div className="flex h-16 w-52 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
+          <div className="flex h-16 w-52 md:mr-4 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
             + ₹ 100{" "}
           </div>
-          <div className="flex h-16 w-52 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
+          <div className="flex h-16 w-52 md:mr-4 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
             + ₹ 200{" "}
           </div>
-          <div className="flex h-16 w-52 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
+          <div className="flex h-16 w-52 md:mr-4 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
             + ₹ 300{" "}
           </div>
-          <div className="flex h-16 w-52 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
+          <div className="flex h-16 w-52 md:mr-4 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
             + ₹ 400{" "}
           </div>
-          <div className="flex h-16 w-52 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
+          <div className="flex h-16 w-52 md:mr-4 rounded-lg font-bold text-md items-center justify-center bg-[#FCB512]">
             + ₹ 500{" "}
           </div>
         </div>

@@ -57,11 +57,11 @@ const Search = () => {
   // searchEl.addEventListener("keyup", search);
   return (
     <div className="flex items-center p-3">
-      <div className="searchbox flex flex-1">
+      <div className="searchbox flex flex-1 lg:w-full">
         <input
           className="flex border p-4 px-6 mt-2 text-sd rounded-3xl h-10 w-2/4"
           type="text"
-          placeholder="Search services & packages"
+          placeholder="Search here"
           name="search"
         />
       </div>

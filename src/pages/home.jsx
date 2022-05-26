@@ -1,5 +1,5 @@
 import React from "react";
-import MenuPanel from "../components/Home-Components/MenuPanel";
+
 import Search from "../components/Home-Components/Search";
 
 import Schedule from "../components/Home-Components/Schedule";
@@ -13,8 +13,7 @@ import Footer from "../components/common/Footer";
 function Home() {
   return (
     <>
-      <div className=" w-full px-5 xl:px-0 xl:w-2/3">
-        {/* <MenuPanel /> */}
+      <div className="w-full px-5 lg:w-full ">
         <Search />
         <MidBanner
           image={require("../assets/BgBottom.jpg")}

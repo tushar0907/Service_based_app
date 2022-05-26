@@ -5,7 +5,7 @@ const CartDetails = ({product}) => {
     <div className="flex flex-1 pt-5 font-worksans items-start mt-20 flex-col w-3/4 h-32">
       <div className="flex font-bold text-lg">
         {" "}
-        Purus habitant lectus maecenas
+        Purus habitant lectus maecena
       </div>
       <div className="flex flex-1 pt-3 flex-col">
         <div className="flex">
@@ -25,7 +25,7 @@ const CartDetails = ({product}) => {
           />
           <p className="font-bold pl-3">1-2 Strength</p>
         </div>
-        <div className="flex flex-1 border-b border-black pt-7 w-4/5">
+        <div className="flex flex-1 border-b border-black pt-7 w-4/5 lg:pb-8">
           <p>{product}</p>
         </div>
       </div>

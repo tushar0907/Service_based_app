@@ -29,10 +29,10 @@ const Instructions = ({cart}) => {
       {cart.map((item) => (
         <div
           key={item.description + item.category}
-          className="flex mt-8 rounded-xl w-2/4 ml-4 flex-col border flex-1">
+          className="flex mt-8 rounded-xl w-2/4 ml-4 flex-col border flex-1 lg:w-3/5">
           <div className="flex p-6 border-b">
             <div
-              className="flex bg-no-repeat w-20"
+              className="flex bg-no-repeat w-20 mr-5"
               style={{
                 backgroundImage: `url(${item.image}`,
               }}></div>
@@ -42,7 +42,7 @@ const Instructions = ({cart}) => {
             </div>
             <div
               onClick={() => remove_from_cart(item.sid)}
-              className="flex cursor-pointer">
+              className="flex  cursor-pointer">
               <AiFillCloseCircle size="30" />
             </div>
           </div>
@@ -56,7 +56,7 @@ const Instructions = ({cart}) => {
         </div>
       ))}
 
-      <div className="flex flex-1 rounded-xl mx-4 border w-1/2 mt-10 border-[#FCB512]">
+      <div className="flex flex-1  md:ml-12 rounded-xl mx-4 border w-1/2 mt-10 border-[#FCB512]">
         <div className="flex flex-1">
           <input
             type="text"

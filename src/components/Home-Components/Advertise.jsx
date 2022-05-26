@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Advertise = () => {
   return (
-    <div className="flex p-7 flex-col font-worksans h-64 mt-3 bg-[#e9c593] rounded-">
+    <div className="flex p-7 flex-col font-worksans h-64 mt-3 bg-[#e9c593] ">
       <div className="flex pl-5 pt-4 justify-start items-center text-2xl font-bold">
         Earn ₹ 750 for every Friend you Refer
       </div>
@@ -12,7 +12,7 @@ const Advertise = () => {
           Get your friends join the S8 App and get 750 INR for every successful
           refer.
           <Link to={"/refer"}>
-            <button className="flex font-bold text-xl justify-center items-center mt-3 h-10 rounded-2xl bg-gradient-to-r from-[#fdb513] to-[#febb1f]">
+            <button className="flex w-52 font-bold text-xl justify-center items-center mt-3 h-10 rounded-2xl bg-gradient-to-r from-[#fdb513] to-[#febb1f]">
               Refer Now
             </button>
           </Link>

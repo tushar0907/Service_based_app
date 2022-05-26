@@ -12,7 +12,7 @@ const Trending = () => {
       };
       await axios(config)
         .then((res) => {
-          setTrendingServices(res.data.slice(0, 5));
+          setTrendingServices(res.data);
         })
         .catch(function (error) {
           console.log(error);

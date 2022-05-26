@@ -15,13 +15,13 @@ code {
 
 .swiper {
     width: 100%;
-    height: 40%;
+    height: 50%;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: #f4e3c9;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,4 +42,11 @@ code {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#wide {
+    max-width: 100%;
+    height: auto;
+    width: auto\5;
+    /* ie8 */
 }
