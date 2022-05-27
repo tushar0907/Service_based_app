@@ -6947,6 +6947,11 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.6"
 
+moment@^2.29.3:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.3.tgz#edd47411c322413999f7a5940d526de183c031f3"
+  integrity sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz"
@@ -8178,6 +8183,11 @@ react-is@^18.0.0:
   version "18.1.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.1.0.tgz"
   integrity sha512-Fl7FuabXsJnV5Q1qIOQwx/sagGF18kogb4gpfcG4gjLBWO0WDiiz1ko/ExayuxE7InyQkBLkxRFG5oxY6Uu3Kg==
+
+react-razorpay@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/react-razorpay/-/react-razorpay-1.1.5.tgz#450324a9ee7f08c3605ac1c8af32878dcb15496a"
+  integrity sha512-jYDGW7k71qyANELOoa8JMgZjdGl1UiqqH/QbmkREl1q2nk7E+W8nyMdvD6ukXm/MPZJxTFoYljBFOJb8zydwTg==
 
 react-redux@^8.0.1:
   version "8.0.1"
