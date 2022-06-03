@@ -57,7 +57,7 @@ const MenuPanel = () => {
           <div className="flex font-medium mb-10 text-2xl">
             Order any service, anytime from anywhere
           </div>
-          <div className="flex mb-12">
+          <div className="flex w-full justify-start mr-6 mb-12">
             <div className="flex mr-4 w-52 justify-center h-20 bg-orange-600 rounded-xl">
               <button className="flex font-medium text-white text-xl items-center">
                 Select Location

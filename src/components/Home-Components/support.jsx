@@ -12,7 +12,7 @@ const Support = () => {
             </div>
           </div>
           <div className="flex w-full justify-start">
-            <div className="flex pb-6 text-left w-3/5 pt-6">
+            <div className="flex pb-6 text-left w-full mr-5 pt-6">
               <p>
                 Your servers and customer inquiries will be managed by a
                 dedicated support team around the clock. Any technical concerns

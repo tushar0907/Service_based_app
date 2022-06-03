@@ -28,7 +28,7 @@ const Blog = () => {
           <p>Featured Services</p>
         </div>
       </div>
-      <div className="flex flex-1 mt-5 p-5 mb-6 rounded-lg justify-center space-x-6 overflow-x-scroll items-center w-full">
+      <div className="flex flex-1 mt-5 p-5 mb-6 rounded-lg space-x-6 overflow-x-scroll items-center w-full">
         {featureServices.map((item) => (
           <div className="flex w-[23rem] h-[30rem] justify-center items-center rounded-lg box1 flex-col bg-blue-100">
             <div className="flex geeks mt-8 mb-3 w-80 justify-center items-center wrounded-lg">

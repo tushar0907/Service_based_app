@@ -30,7 +30,7 @@ const ValueService = () => {
         </div>
       </div>
 
-      <div className="flex flex-1 p-5 pb-7 mb-2 overflow-x-scroll rounded-lg justify-center space-x-8 items-center w-ful">
+      <div className="flex flex-1 p-5 pb-7 mb-2 overflow-x-scroll rounded-lg space-x-8 items-center w-ful">
         {valueServices.map((item) => (
           <Link to={`/product/${item.sid}`}>
             <div

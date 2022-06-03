@@ -31,7 +31,7 @@ const Trending = () => {
             <p>Trending Services</p>
           </div>
         </div>
-        <div className="flex w-full justify-center">
+        <div className="flex w-full">
           <div className="flex overflow-x-scroll flex-1 space-x-6 justify-center p-5 pb-7 mb-2 rounded-lg items-center">
             {trendingServices.map((item) => (
               <div

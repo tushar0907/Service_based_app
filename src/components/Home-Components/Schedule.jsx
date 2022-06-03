@@ -32,7 +32,7 @@ const Schedule = () => {
           </div>
         </div>
         <div className="flex w-full justify-center">
-          <div className="flex flex-1 overflow-x-scroll space-x-6 justify-center p-5 pb-7 mb-2 rounded-lg items-center">
+          <div className="flex flex-1 overflow-x-scroll space-x-6 p-5 pb-7 mb-2 rounded-lg items-center">
             {trendingServices.map((item) => (
               <div
                 key={item.category + item.sid}

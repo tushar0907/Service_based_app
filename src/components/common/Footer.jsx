@@ -12,7 +12,7 @@ const Footer = () => {
         <img
           className="flex ml-5"
           src={logo}
-          width="280px"
+          width="200px"
           height="26px"
           alt="logo"
         />
