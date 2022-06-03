@@ -36,7 +36,7 @@ const Schedule = () => {
             {trendingServices.map((item) => (
               <div
                 key={item.category + item.sid}
-                className="flex box1 mt-6 w-[23rem] h-[30rem] flex-col rounded-xl bg-blue-100">
+                className="flex box1 mt-6 w-full h-[30rem] flex-col rounded-xl bg-blue-100">
                 <div className="flex h-40 pt-2 justify-center items-center wrounded-lg">
                   <img
                     className="w-40 mt-7 h-40 rounded-lg"

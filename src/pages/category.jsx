@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import React from "react";
 import {BASE_URL} from "../base";
 import MainCategory from "../components/Categories/MainCategory";

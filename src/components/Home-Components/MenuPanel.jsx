@@ -3,15 +3,34 @@ import logo from "../../assets/logo.jpg";
 import {Link} from "react-router-dom";
 import {FiSearch} from "react-icons/fi";
 import {CgProfile} from "react-icons/cg";
+import {BASE_URL} from "../../base";
+import axios from "axios";
 
 const MenuPanel = () => {
+  const [categoryService, setCategoryService] = React.useState([]);
+  React.useEffect(() => {
+    const getCat = async () => {
+      var config = {
+        method: "get",
+        url: BASE_URL + "/rest/categories",
+      };
+      await axios(config)
+        .then((res) => {
+          setCategoryService(res.data.results.slice(0, 4));
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    };
+    getCat();
+  }, []);
   return (
-    <div className="flex flex-col w-full bg-gradient-to-r from-[#fef6ed] to-[#fdd4ee]">
-      <div className="flex w-full mt-5 font-body border-b drop-shadow-2xl items-center justify-between text-md text[#c1b5bc]">
+    <div className="flex flex-col font-worksans w-full bg-gradient-to-r from-[#fef6ed] to-[#fdd4ee]">
+      <div className="flex w-full mt-5 font-worksans border-b drop-shadow-2xl items-center justify-between text-md text[#c1b5bc]">
         <div className="flex mx-16">
           <img className="flex mt-12l" src={logo} width="100" alt="logo" />
         </div>
-        <ul className=" font-bold text-xl flex space-x-20">
+        <ul className=" font-bold font-worksans  text-xl flex space-x-20">
           <li className="text-md p-3">
             <Link to="/">
               <p>Home</p>
@@ -58,11 +77,6 @@ const MenuPanel = () => {
             Order any service, anytime from anywhere
           </div>
           <div className="flex w-full justify-start mr-6 mb-12">
-            <div className="flex mr-4 w-52 justify-center h-20 bg-orange-600 rounded-xl">
-              <button className="flex font-medium text-white text-xl items-center">
-                Select Location
-              </button>
-            </div>
             <div className="flex">
               {" "}
               <div className="searchbox flex flex-1 lg:w-[35rem]">
@@ -80,20 +94,13 @@ const MenuPanel = () => {
           </div>
           <div className="flex">
             <div className="flex p-2 text-orange-600">Popular: </div>
-            <div className="flex mx-2">
-              <div className="flex mr-4 h-10 items-center bg-white w-32 justify-center text-gray-400 rounded-lg">
-                <p>Electronics</p>
+            {categoryService?.map((item) => (
+              <div className="flex mx-2">
+                <div className="flex mr-4 h-10 items-center bg-white w-48 justify-center text-gray-400 rounded-lg">
+                  <p>{item.name.slice(0, 23)}</p>
+                </div>
               </div>
-              <div className="flex mr-4 h-10 items-center bg-white w-32 justify-center text-gray-400 rounded-lg">
-                <p>Cleaning</p>
-              </div>
-              <div className="flex mr-4 h-10 items-center bg-white w-32 justify-center text-gray-400 rounded-lg">
-                <p>Painting</p>
-              </div>
-              <div className="flex h-10 items-center bg-white w-32 justify-center text-gray-400 rounded-lg">
-                <p>Home Move</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

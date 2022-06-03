@@ -6,8 +6,8 @@ module.exports = {
                 xsm: "340px",
             },
             fontFamily: {
-                body: ["Play"],
                 worksans: ["Work Sans"],
+                roboto: ["Roboto"],
             },
             spacing: {
                 mid: "10px",

@@ -4,8 +4,27 @@ import {BsChevronRight} from "react-icons/bs";
 import {FaMapMarkerAlt} from "react-icons/fa";
 import {MdPhoneIphone} from "react-icons/md";
 import {MdEmail} from "react-icons/md";
+import {BASE_URL} from "../../base";
+import axios from "axios";
 
 const Footer = () => {
+  const [categoryService, setCategoryService] = React.useState([]);
+  React.useEffect(() => {
+    const getCat = async () => {
+      var config = {
+        method: "get",
+        url: BASE_URL + "/rest/categories",
+      };
+      await axios(config)
+        .then((res) => {
+          setCategoryService(res.data.results.slice(0, 4));
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    };
+    getCat();
+  }, []);
   return (
     <div className="flex w-full h-[30rem] p-2 font-worksans mt-24 mb-10 rounded-lg bg-gradient-to-r from-[#fcf7f4] to-[#eae3ef]">
       <div className="flex h-3/4 w-96 justify-center py-20">
@@ -31,25 +50,16 @@ const Footer = () => {
       </div>
       <div className="flex flex-col items-center justify-center w-96 h-[29rem] ml-10">
         <p className="flex mb-12 font-bold text-xl">Category</p>
-        <ul className="flex justify-around text-lg flex-col font-medium">
-          <li className="flex mb-3">
-            <BsChevronRight style={{color: "orange"}} />
-            <p className="flex ml-3 ">Electronics</p>
-          </li>
-          <li className="flex">
-            <BsChevronRight style={{color: "orange"}} />
-            <p className="flex ml-3">Cleaning</p>
-          </li>
-          <li className="flex mt-3">
-            <BsChevronRight style={{color: "orange"}} />
-            <p className="flex ml-3 ">Home Move</p>
-          </li>
-          <li className="flex mt-3">
-            <BsChevronRight style={{color: "orange"}} />
-            <p className="flex ml-3">Painting</p>
-          </li>
-        </ul>
+        {categoryService.map((item) => (
+          <ul className="flex w-80 justify-around text-lg flex-col font-medium">
+            <li className="flex mb-3">
+              <BsChevronRight style={{color: "orange"}} />
+              <p className="flex ml-3 ">{item.name}</p>
+            </li>
+          </ul>
+        ))}
       </div>
+
       <div className="flex flex-col items-center justify-center w-96 h-[27rem] ml-10">
         <p className="flex mb-12 font-bold text-xl">Contact Info</p>
         <ul className="flex justify-around text-lg ml-10 flex-col font-medium">

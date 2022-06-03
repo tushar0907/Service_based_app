@@ -1,14 +1,18 @@
 import axios from "axios";
 import React from "react";
+import {AiOutlineLeft} from "react-icons/ai";
+import {useParams, useNavigate} from "react-router-dom";
 import {CgMore} from "react-icons/cg";
 
 const MainCategory = (props) => {
   const fetchCategory = async (link) => {
     await axios.get(link).then((res) => "");
   };
+  const navigate = useNavigate();
   return (
     <div className="flex font-worksans flex-col cursor-pointer flex-1 border-b border-[#FCB512] lg:mb-16 lg:justify-center lg:pb-10">
       <div className="flex -ml-16 font-worksans font-bold text-4xl p-6">
+        <AiOutlineLeft onClick={() => navigate(-1)} className="mr-3" />
         Categories
       </div>
       <div className="flex w-full justify-center items-center py-3">

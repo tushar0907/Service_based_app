@@ -14,7 +14,7 @@ const Trending = () => {
       };
       await axios(config)
         .then((res) => {
-          setTrendingServices(res.data.slice(0, 4));
+          setTrendingServices(res.data.slice(0, 5));
         })
         .catch(function (error) {
           console.log(error);
@@ -36,7 +36,7 @@ const Trending = () => {
             {trendingServices.map((item) => (
               <div
                 key={item.category + item.sid}
-                className="flex box1 mt-6 w-[23rem] h-[30rem] flex-col rounded-xl bg-blue-100">
+                className="flex box1 mt-6 w-full h-[30rem] flex-col rounded-xl bg-blue-100">
                 <div className="flex h-40 pt-2 justify-center items-center wrounded-lg">
                   <img
                     className="w-40 mt-7 h-40 rounded-lg"
@@ -44,7 +44,7 @@ const Trending = () => {
                     alt="hello"
                   />
                 </div>
-                <div className="flex text-xl justify-center items-center mt-2 font-bold">
+                <div className="flex w-full text-xl justify-center items-center mt-2 font-bold">
                   {item.name}
                 </div>
                 <div className="flex justify-center p-3 pl-4 mt-3 text-center items-center">

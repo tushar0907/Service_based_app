@@ -6,6 +6,7 @@ import {Link, Router} from "react-router-dom";
 import axios from "axios";
 import {BASE_URL} from "../../base";
 import {useParams} from "react-router-dom";
+import "../../App.css";
 import {GrFormClose} from "react-icons/gr";
 
 const Body = (props) => {
@@ -71,8 +72,12 @@ const Body = (props) => {
         }
       });
   };
+  function myFunction(id) {
+    var popup = document.getElementById("myPopup_" + id);
+    popup.classList.toggle("show");
+  }
 
-  return props.products.map((product) => (
+  return props.products.map((product, index) => (
     <div
       key={product.image}
       className={`flex border my-8 font-worksans font-medium p-10 bg-cover bg-right bg-no-repeat h-96 w-4/5 lg:p-4 lg:w-7/12 rounded-3xl lg:drop-shadow-2xl lg:border lg:border-[#d9c7c7] md:drop-shadow-2xl md:border md:border-[#d9c7c7] md:w-5/6`}
@@ -110,16 +115,21 @@ const Body = (props) => {
                 <button
                   onClick={() => addToCart(product)}
                   className={`flex h-12 mb-3 cursor-pointer flex-1 justify-center items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F]  to-[#F1Ad10] `}>
-                  Add to cart
+                  Book Now
                 </button>
               )}
             </>
           ) : (
-            <button
-              onClick={() => Router.push("/login")}
-              className="flex h-12 mb-3 cursor-pointer flex-1 justify-center items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F]  to-[#F1Ad10]">
-              Login
-            </button>
+            <>
+              <div
+                onClick={() => myFunction(index)}
+                className="flex popup h-12 mb-3 cursor-pointer flex-1 justify-center items-center font-bold rounded-2xl bg-gradient-to-r from-[#FFD36F]  to-[#F1Ad10]">
+                Login
+                <span class="popuptext" id={`myPopup_${index}`}>
+                  Before adding a product to your cart, you must first log in!
+                </span>
+              </div>
+            </>
           )}{" "}
         </div>
       </div>

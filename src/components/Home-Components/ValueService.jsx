@@ -14,7 +14,7 @@ const ValueService = () => {
       };
       await axios(config)
         .then((res) => {
-          setValueServices(res.data.results.slice(0, 6));
+          setValueServices(res.data.results.slice(0, 8));
         })
         .catch(function (error) {
           console.log(error);
@@ -25,12 +25,12 @@ const ValueService = () => {
   return (
     <div className="flex font-worksans h-96 flex-col w-full pl-4 pr-4 mb-20 mt-24">
       <div className="flex w-full justify-center">
-        <div className="flex w-[96rem] border-b border-black h-20 font-bold text-[2.2rem] items-start">
+        <div className="flex w-full border-b border-black h-20 font-bold text-[2.2rem] items-start">
           <p>Value Added Services</p>
         </div>
       </div>
 
-      <div className="flex flex-1 p-5 pb-7 mb-2 overflow-x-scroll rounded-lg space-x-8 items-center w-ful">
+      <div className="flex flex-1 p-5 pb-7 mb-2 overflow-x-scroll rounded-lg space-x-8 items-center w-full">
         {valueServices.map((item) => (
           <Link to={`/product/${item.sid}`}>
             <div

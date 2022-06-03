@@ -15,11 +15,7 @@ const Support = () => {
             <div className="flex pb-6 text-left w-full mr-5 pt-6">
               <p>
                 Your servers and customer inquiries will be managed by a
-                dedicated support team around the clock. Any technical concerns
-                may be assigned to them at any time of day or night, and they
-                will make sure everything is working smoothly to your
-                satisfaction. You won't have to worry about any technological
-                issues, allowing you to focus on your sales.
+                dedicated support team around the clock.
               </p>
             </div>
           </div>
@@ -38,9 +34,8 @@ const Support = () => {
                 Commitment to service
               </div>
               <div className="flex text-center pt-1 p-3 items-center justify-center">
-                We will assure period of time for which Customer is committed to
-                pay for a certain Service, if any, as set forth in the Agreement
-                is referred to as a Service Commitment.
+                We are committed to provide you best service in shortest
+                possible time.
               </div>
             </div>
             <div className="flex box1 flex-col w-80 h-80 rounded-lg bg-blue-100">
@@ -55,9 +50,8 @@ const Support = () => {
                 Exceptional Experience
               </div>
               <div className="flex text-center pt-1 p-4 items-center justify-center">
-                We'll show you where your content sits, how it's structured, and
-                how it motivates your prospects and customers to interact with
-                your business.
+                With a team of experienced people, we look to provide you with
+                the best service.
               </div>
             </div>
           </div>
@@ -74,9 +68,8 @@ const Support = () => {
                 Data and Payment Security
               </div>
               <div className="flex text-center pt-1 p-4 items-center justify-center">
-                We can assist you with protecting your payment process as
-                important company data from unauthorized access and
-                mistreatment, as well as securing data against theft.
+                We use protected payment gateways so that your payment and data
+                is safe and secured
               </div>
             </div>
             <div className="flex flex-col box1 w-80 h-80 rounded-lg mt-2 bg-purple-100">
@@ -91,9 +84,7 @@ const Support = () => {
                 Help and Support
               </div>
               <div className="flex pt-1  text-center p-4 items-center justify-center">
-                We promise you that if you want any assistance from us, please
-                do not hesitate to ask. We are always here to assist our
-                clients.
+                24*7 Available for help and support
               </div>
             </div>
           </div>
