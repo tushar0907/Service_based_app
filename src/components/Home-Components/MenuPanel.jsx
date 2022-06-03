@@ -33,7 +33,7 @@ const MenuPanel = () => {
         <div className="flex mx-16">
           <img className="flex mt-12l" src={logo} width="100" alt="logo" />
         </div>
-        <ul className=" font-worksans  text-xl flex flex-1 items-center justify-center space-x-10">
+        <ul className=" font-worksans mx-6 text-xl flex flex-1 items-center justify-end space-x-10">
           <li className="text-md px-2">
             <Link to="/">
               <p>Home</p>
@@ -54,15 +54,13 @@ const MenuPanel = () => {
               <p>Cart</p>
             </Link>
           </li>
-        </ul>
-        <div className="flex ml-auto pr-10 items-center">
-          <Link to={isAuthenticated ? "/profile" : "/login"}>
-            <div className="flex">
+          <li>
+            <Link to={isAuthenticated ? "/profile" : "/login"}>
               {/* <p className="flex text-xl font-bold items-center">Profile </p>{" "} */}
               <CgProfile className="pl-5 flex" size="45" />
-            </div>
-          </Link>
-        </div>
+            </Link>
+          </li>
+        </ul>
       </div>
 
       <div className="flex items-center lg:justify-center w-full lg:flex-row flex-col mb-20">
