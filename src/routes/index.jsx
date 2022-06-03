@@ -17,7 +17,7 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import VerifyPage from "../pages/VerifyPage";
 
-export default function () {
+export default () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -38,4 +38,4 @@ export default function () {
       <Route path="/verify" element={<VerifyPage />} />
     </Routes>
   );
-}
+};

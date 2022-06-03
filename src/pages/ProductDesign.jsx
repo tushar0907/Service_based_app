@@ -48,7 +48,7 @@ const CartPage = () => {
   };
 
   return (
-    <div className="flex h-full flex-col w-full items-center">
+    <div className="flex h-full flex-col w-full items-center mt-20">
       <ProductBanner name={productDetail.name} image={productDetail.image} />
       <ProductInfo product={productDetail.description} />
       <ProductOffers />
@@ -56,12 +56,12 @@ const CartPage = () => {
       <FAQs faqs={productDetail.faq_set} price={productDetail.service_price} />
       <button
         onClick={addToCart}
-        className="flex font-medium flex-1 mx-16 w-96 mb-4 p-4 rounded-xl bg-gradient-to-r from-[#FFD36F] to-[#F1AD10]">
+        className="flex font-medium flex-1 mb-3 mx-16 w-96 -mt-16 p-4 rounded-xl bg-gradient-to-r from-[#FFD36F] to-[#F1AD10]">
         <div className="flex justify-center items-end flex-1">
           <p> ₹ {productDetail.service_price}</p>
         </div>
-        <button className="flex mb-3 items-center font-bold flex-1">
-          <p>Add to Cart</p>
+        <button className="flex items-center font-bold flex-1">
+          <p>Book Now</p>
         </button>
       </button>
     </div>

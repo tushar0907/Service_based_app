@@ -1,5 +1,6 @@
 import "./App.css";
 import Navigation from "./components/common/Navigation";
+import MenuPanel from "./components/Home-Components/MenuPanel";
 import Router from "./routes";
 import React from "react";
 import {BrowserRouter} from "react-router-dom";
@@ -17,11 +18,10 @@ function App() {
   return (
     <SnackbarProvider maxSnack={3}>
       <BrowserRouter>
-        <div className="flex bg-[#f4e3c9]" style={{height: currentHeight}}>
-          <div className="w-20 h-full">
-            <Navigation />
-          </div>
-          <div className="flex overflow-y-auto justify-center w-full">
+        <div
+          className="flex flex-col bg-[#ffffff]"
+          style={{height: currentHeight}}>
+          <div className="flex overflow-y-scroll justify-center w-full">
             <Router />
           </div>
         </div>

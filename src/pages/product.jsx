@@ -23,7 +23,7 @@ const Product = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full items-center">
+    <div className="flex flex-col mt-24 w-full items-center">
       <Top />
       <div className="flex flex-col w-full items-center py-5">
         <Body isLoading={isLoading} products={products} />

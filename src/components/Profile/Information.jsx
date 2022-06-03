@@ -10,7 +10,7 @@ const Information = () => {
     <div className="flex flex-1 flex-col">
       <div className="flex flex-1 font-medium text-lg justify-around pl-10 ml-12  items-center w-10/12 border-b border-black">
         <Link to={"/orderdetails"}>
-          <div className="flex bg-[#FCB512] h-24 items-center justify-center w-24 rounded-full">
+          <div className="flex bg-[#FCB512] h-32 items-center justify-center w-32 rounded-full">
             <img src={memo} style={{height: "30%", width: "30%"}} alt="guard" />
           </div>
           <p className="flex items-center justify-center">Orders</p>
@@ -19,7 +19,7 @@ const Information = () => {
         <div className="flex">
           <Link to={"/balance"}>
             <div>
-              <div className="flex cursor-pointer bg-[#FCB512] h-24 items-center justify-center w-24 rounded-full">
+              <div className="flex cursor-pointer bg-[#FCB512] h-32 items-center justify-center w-32 rounded-full">
                 <img
                   src={wallet}
                   style={{height: "30%", width: "30%"}}
@@ -32,7 +32,7 @@ const Information = () => {
         </div>
         <div className="flex flex-col">
           <Link to={"/coupon"}>
-            <div className="flex bg-[#FCB512] h-24 items-center justify-center w-24 rounded-full">
+            <div className="flex bg-[#FCB512] h-32 items-center justify-center w-32 rounded-full">
               <img
                 src={coupon}
                 style={{height: "30%", width: "30%"}}

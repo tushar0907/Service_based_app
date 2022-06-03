@@ -95,13 +95,13 @@ const CarrierPage = () => {
   }, []);
 
   return isLoading ? (
-    <div class="flex items-center justify-center ">
+    <div class="flex mt-96 items-center justify-center ">
       <div class="w-24 h-24 border-l-2 border-gray-900 rounded-full animate-spin"></div>
     </div>
   ) : (
-    <div className="flex flex-col w-3/4 h-full">
+    <div className="flex mt-10 flex-col w-3/4 h-full">
       <div className="flex flex-1 border-b-2 border-[#FCB512] flex-col my-10 w-full">
-        <div className="flex font-bold p-4 pl-5 text-md">Carrier</div>
+        <div className="flex font-bold p-4 pl-5 text-lg">Carrier</div>
         <div className="flex overflow-x-auto ">
           {subCategory.map((item) => (
             <div

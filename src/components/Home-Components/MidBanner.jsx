@@ -1,12 +1,9 @@
 import React from "react";
+import {FiSearch} from "react-icons/fi";
 // Import Swiper React components
-import {Swiper, SwiperSlide} from "swiper/react";
+// import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-
-import "../../index.css";
 
 // import required modules
 import {Navigation} from "swiper";
@@ -31,64 +28,62 @@ const MidBanner = () => {
   //   getImages();
   // }, []);
   return (
-    <>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>
-          <div
-            className="flex p-10 flex-col lg:bg-[length:1850px_480px] bg-no-repeat w-full h-96 rounded-lg md:md:bg-[length:950px_360px]"
-            style={{
-              backgroundImage: `url(${require("../../assets/image2.jpg")})`,
-            }}>
-            <div className="flex font-bold text-xl text-white h-32 backdrop-opacity-5 backdrop-invert w-52">
-              <div className="flex lg:w-96 text-bg-yellow-100 flex-col items-start flex-1 font-superbold lg:text-5xl md:w-80 md:text-3xl md:mt-12">
-                {" "}
-                Comprehensive <p>Car Wash</p>{" "}
-              </div>
-              <div className="flex flex-1 flex-col text-4xl">
-                {/* Service at your <p>Doorstep</p> */}
-              </div>
+    <div className="flex h-3/4 justify-center bg-gradient-to-r from-[#fef6ed] to-[#fdd4ee] w-full mb-20">
+      <div className="flex w-3/6 justify-center">
+        {" "}
+        <img src={require("../../assets/top.png")} />
+      </div>
+      <div className="flex flex-col flex-1">
+        <div className="flex font-bold text-5xl my-20">
+          <p>
+            One-Stop Solution for your{" "}
+            <p className="text-orange-600">Services</p>{" "}
+          </p>
+        </div>
+        <div className="flex font-medium mb-10 text-2xl">
+          Order any service, anytime from anywhere
+        </div>
+        <div className="flex mb-12">
+          <div className="flex mr-4 w-44 justify-center h-16 bg-orange-600 rounded-xl">
+            <button className="flex font-medium text-white text-xl items-center">
+              Select Location
+            </button>
+          </div>
+          <div className="flex">
+            {" "}
+            <div className="searchbox flex flex-1 lg:w-full">
+              <input
+                className="flex border p-4 px-6 text-sd rounded-l-xl h-16 w-4/5"
+                type="text"
+                placeholder="Search here"
+                name="search"
+              />
+              <button className="flex items-center justify-center bg-orange-600 w-24 h-16 rounded-r-xl">
+                <FiSearch size="24" />
+              </button>
             </div>
           </div>
-        </SwiperSlide>
-        {/* <SwiperSlide>
-          <div
-            className="flex p-10 flex-col bg-[length:1250px_460px] bg-no-repeat w-full h-96 rounded-lg"
-            style={{
-              backgroundImage: `url(${require("../../assets/image3.jpg")})`,
-            }}>
-            <div className="flex flex-col text-4xl font-bold text-white h-32 opacity-50 bg-black">
-              Affordable Car <p>Services</p>
+        </div>
+        <div className="flex">
+          <div className="flex p-2 text-orange-600">Popular: </div>
+          <div className="flex p-2">
+            <div className="flex mr-2 bg-white w-32 justify-center text-gray-400 rounded-lg">
+              <p>Electronics</p>
+            </div>
+            <div className="flex mr-2 bg-white w-32 justify-center text-gray-400 rounded-lg">
+              <p>Digital Marketing</p>
+            </div>
+            <div className="flex mr-2 bg-white w-32 justify-center text-gray-400 rounded-lg">
+              <p>Painting</p>
+            </div>
+            <div className="flex bg-white w-32 justify-center text-gray-400 rounded-lg">
+              <p>Home Move</p>
             </div>
           </div>
-        </SwiperSlide> */}
-        <SwiperSlide>
-          <div
-            className="flex p-10 flex-col lg:bg-[length:1850px_460px] bg-no-repeat w-full h-96 rounded-lg md:bg-[length:920px_330px]"
-            style={{
-              backgroundImage: `url(${require("../../assets/image1.jpg")})`,
-            }}>
-            <div className="flex lg:text-5xl lg:w-96 mt-20 font-bold text-white lg:h-32 backdrop-opacity-5 backdrop-invert md:h-16 md:text-2xl md:w-60 ">
-              <div className="flex 2xl:-mt-0 lg:text-5xl lg:w-96 mt-20 font-bold text-white lg:h-32 backdrop-opacity-5 backdrop-invert md:h-12 md:text-xl md:w-60 items-start justify-center">
-                <p className="flex"> Well Trained Security Guards</p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </>
+        </div>
+      </div>
+    </div>
   );
-  // <div className="w-full flex bg-red-700 justify-center items-center">
-  //   <div
-  //     className="flex p-10 flex-col bg-no-repeat w-full h-96 rounded-lg"
-  //     style={{
-  //       backgroundImage: `url(${item.image}`,
-  //     }}>
-  //     <div className="text-white flex flex-1 text-2xl"></div>
-  //     <div className="text-white flex flex-1 text-left font-bold w-60">
-  //       {}
-  //     </div>
-  //   </div>
-  // </div>
 };
 
 export default MidBanner;

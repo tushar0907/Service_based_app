@@ -3,14 +3,14 @@ import {Link} from "react-router-dom";
 
 const SubCategory = (props) => {
   return (
-    <div className="flex flex-1 border-b border-[#FCB512] lg:pb-16 lg:justify-center">
+    <div className="flex flex-1  border-b border-[#FCB512] lg:pb-16 lg:justify-center">
       {props.isLoading
         ? null
         : props.subCategories.map((sub) => (
             <Link
               to={`/products/${sub.name}/${sub.scid}`}
               key={sub.name + sub.scid}
-              className="flex">
+              className="flex ">
               <div className="flex font-worksans font-medium text-lg p-6 pl-8"></div>
               <div className="flex justify-center">
                 <div className="flex flex-col flex-1 items-center justify-around">
@@ -24,7 +24,7 @@ const SubCategory = (props) => {
                       />
                     </div>
                   </div>
-                  <div className="flex w-24 text-sm lg:mt-2 lg:w-40">
+                  <div className="flex items-center justify-center text-center w-24 text-sm lg:mt-2 lg:w-40">
                     {sub.name}
                   </div>
                 </div>

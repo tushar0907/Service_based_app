@@ -34,7 +34,7 @@ const Cart = () => {
     fetch_from_cart();
   }, []);
   return (
-    <div className="flex flex-col h-full w-3/4">
+    <div className="flex flex-col mt-12 h-full w-3/4">
       <Instructions cart={cart} />
       <Bill cart={cart} total={total} />
     </div>

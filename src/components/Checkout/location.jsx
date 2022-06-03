@@ -2,7 +2,7 @@ import React from "react";
 import {BASE_URL} from "../../base";
 import axios from "axios";
 
-const Location = () => {
+const Location = ({setSelectedAddress, selectedAddress}) => {
   const [visible, setVisible] = React.useState(false);
   const [name, setName] = React.useState("");
   const [address1, setAddress1] = React.useState("");
@@ -11,6 +11,21 @@ const Location = () => {
   const [phone, setPhone] = React.useState("");
   const [state, setState] = React.useState("");
   const [pincode, setPincode] = React.useState("");
+
+  const [allAddresses, setAllAddresses] = React.useState([]);
+
+  React.useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) return;
+    const fetch_address = async () => {
+      await axios
+        .get(BASE_URL + "/rest/address", {
+          headers: {Authorization: "Token " + token},
+        })
+        .then((res) => setAllAddresses(res.data.results));
+    };
+    fetch_address();
+  }, []);
 
   const saveUser = () => {
     var axios = require("axios");
@@ -49,13 +64,20 @@ const Location = () => {
     <div className="flex font-worksans flex-col mt-8 w-full">
       <div className="flex font-medium pl-5 text-md p-2">Checkout</div>
       <div className="flex flex-col p-3 flex-1">
-        <div className="flex flex-1 pl-3 font-bold text-lg">
-          Location for Pickup
-        </div>
+        <div className="flex flex-1 font-bold text-lg">Location for Pickup</div>
+        {allAddresses.map((address) => (
+          <div
+            onClick={() => setSelectedAddress(address.id)}
+            className={`flex ${
+              selectedAddress === address.id
+                ? "bg-black text-white"
+                : "text-black"
+            } cursor-pointer border p-2 border-black my-1 rounded-xl`}>{`${address.name}, ${address.address_1}, ${address.address_2}, ${address.city}, ${address.state}-${address.pin_code}, ${address.telephone}`}</div>
+        ))}
         <button
-          className="flex my-7 h-12 mx-3 border font-semibold w-32 items-center justify-center rounded-xl bg-[#FCB512]"
+          className="flex my-7 mx-3 border w-60 py-2 font-semibold items-center justify-center rounded-xl bg-[#FCB512]"
           onClick={() => setVisible(!visible)}>
-          {visible ? "Proceed" : "Pick"}
+          {visible ? "Proceed" : "Add New Address"}
         </button>
         {visible && (
           <div id="myDIV" className="flex flex-col flex-1 w-7/12">

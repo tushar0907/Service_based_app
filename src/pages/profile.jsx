@@ -36,7 +36,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="flex w-full">
+    <div className="flex w-full mt-16">
       <Menu name={profile.name} number={profile.ph_number} />
       <Information code={profile.referal_code} />
     </div>

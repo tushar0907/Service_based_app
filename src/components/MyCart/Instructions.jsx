@@ -22,45 +22,50 @@ const Instructions = ({cart}) => {
       });
   };
   return (
-    <div className="flex drop-shadow-lg p-5 font-worksans font-medium w-full flex-col">
-      <div className="flex font-bold text-lg">
+    <div className="flex drop-shadow-lg p-5 justify-center items-center font-worksans font-medium w-full flex-col">
+      <div className="flex font-bold text-4xl justify-center">
         <p>My Cart</p>
       </div>
-      {cart.map((item) => (
-        <div
-          key={item.description + item.category}
-          className="flex mt-8 rounded-xl w-2/4 ml-4 flex-col border flex-1 md:w-96 lg:w-3/5">
-          <div className="flex p-6 border-b md:h-32">
-            <div
-              className="flex bg-no-repeat w-20 mr-5"
-              style={{
-                backgroundImage: `url(${item.image}`,
-              }}></div>
-            <div className="flex flex-1 font-bold flex-col">
-              <p>{item.name}</p>
-              <p>₹ {item.service_price}</p>
-            </div>
-            <div
-              onClick={() => remove_from_cart(item.sid)}
-              className="flex  cursor-pointer">
-              <AiFillCloseCircle size="30" />
+      <div className="flex items-center justify-center w-full flex-col h-[45rem]">
+        {cart.map((item) => (
+          <div
+            key={item.description + item.category}
+            className="flex mt-8 h-full items-center justify-center rounded-xl w-full ml-4 flex-col border flex-1 md:w-96 lg:w-3/5">
+            <div className="flex w-full h-full">
+              <div className="flex flex-1 w-[50rem] h-[110%] p-6 border-b md:h-32">
+                <div className="flex items-center bg-no-repeat h-[121%] w-40 mr-5">
+                  <img
+                    src={item.image}
+                    style={{width: "120px", height: "120px"}}
+                  />
+                </div>
+                <div className="flex flex-1 font-bold flex-col">
+                  <p>{item.name}</p>
+                  <p>₹ {item.service_price}</p>
+                </div>
+                <div
+                  onClick={() => remove_from_cart(item.sid)}
+                  className="flex  cursor-pointer">
+                  <AiFillCloseCircle size="30" />
+                </div>
+              </div>
+              <div className="flex flex-1 h-full p-4 border w-full rounded-xl items-center md:w-96">
+                <input
+                  type="text"
+                  className="w-[42rem] pl-10 rounded-xl h-full flex"
+                  placeholder="Write Instructions"
+                />
+              </div>
             </div>
           </div>
-          <div className="flex h-24 p-4 items-center md:w-96">
-            <input
-              className="flex rounded-xl p-4 bg-[#EEEEEE] h-20 flex-1"
-              type="text"
-              placeholder="Add Instructions"
-            />
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
-      <div className="flex flex-1  md:ml-8 rounded-xl mx-4 border lg:w-1/2 mt-10 md:w-96">
-        <div className="flex rounded-l-xl border border-[#FCB512]">
+      <div className="flex flex-1  md:ml-8 rounded-xl mx-4 border lg:w-3/5 mt-10 md:w-96">
+        <div className="flex w-full rounded-l-xl border border-[#FCB512]">
           <input
             type="text"
-            className="flex w-full h-12 rounded-l-xl p-1"
+            className="flex w-[200%] h-12 rounded-l-xl p-1"
             placeholder="ENTER PROMO CODE"
           />
         </div>

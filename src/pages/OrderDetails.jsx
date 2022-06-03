@@ -4,7 +4,7 @@ import Title from "../components/Order/Title";
 
 const OrderDetails = () => {
   return (
-    <div className="flex items-center flex-col font-worksans h-full w-3/4">
+    <div className="flex items-center flex-col font-worksans mt-24 h-full w-3/4">
       <Title />
       <Records />
     </div>

@@ -1,34 +1,17 @@
 import React from "react";
-import "swiper/css";
-import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/css/navigation";
-
-import "../../index.css";
-
-// import required modules
-import {Navigation} from "swiper";
 
 const BottomBanner = () => {
   return (
-    <Swiper
-      id="bannerr"
-      navigation={true}
-      modules={[Navigation]}
-      className="mySwiper">
-      <SwiperSlide>
-        <div className="flex justify-center items-center h-auto w-full ">
-          <div
-            className="bg-center mt-10 bg-cover bg-no-repeat w-full h-auto rounded-lg"
-            style={{}}>
-            <img
-              id="wide"
-              className="lg:flex"
-              src={require("../../assets/bannerimg.png")}
-            />
-          </div>
-        </div>
-      </SwiperSlide>
-    </Swiper>
+    <div className="flex flex-col justify-center items-center h-[32rem] w-[102%] -ml-5 overflow-x-hidden mb-20 bg-gradient-to-r from-[#edfbfe] via-[#faf5fe] to-[#effafe] ">
+      <div className="flex flex-col font-bold text-5xl justify-center items-center w-[50rem] h-44">
+        Join us to receive a better and
+        <span className="flex mt-3">more convenient service from us</span>{" "}
+      </div>
+
+      <button className="flex bg-[#ff6b2b] text-white h-12 w-40 items-center font-medium justify-center rounded-lg mt-10">
+        Get Now
+      </button>
+    </div>
   );
 };
 

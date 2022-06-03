@@ -58,7 +58,7 @@ const Banner = () => {
   }, []);
   return (
     <div className="flex flex-col h-3/5 font-worksans w-full">
-      <div className="flex justify-start items-center p-5 font-bold text-md">
+      <div className="flex justify-center items-center p-5 font-bold text-2xl">
         Refer and Earn
       </div>
       <div className="flex p-5 justify-center">

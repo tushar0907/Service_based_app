@@ -13,17 +13,6 @@
     }
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
 .App-link {
     color: #61dafb;
 }
@@ -39,4 +28,30 @@
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.arrow,
+.box1 {
+    position: relative;
+    top: 0;
+    transition: top ease 0.4s;
+}
+
+.arrow:hover,
+.box1:hover {
+    top: -20px;
+}
+
+.geeks img {
+    height: 200px;
+    width: 600px;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.geeks img:hover {
+    width: 300px;
+    height: 200px;
 }

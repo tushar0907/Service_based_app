@@ -2,11 +2,11 @@ import React from "react";
 
 const CartOffers = () => {
   return (
-    <div className="flex font-worksans flex-col mt-56 flex-1 w-3/4">
-      <div className="flex font-medium pb-3 pt-5 text-lg lg:pt-40 md:pt-60 xl:pt-40 2xl:pt-40">
+    <div className="flex font-worksans flex-col mt-20 flex-1 w-3/4">
+      <div className="flex font-bold pb-3 pt-5 text-2xl lg:pt-40 md:pt-60 xl:pt-40 2xl:pt-40">
         Special Offers
       </div>
-      <div className="flex pt-6 justify-around">
+      <div className="flex pt-6 justify-start space-x-10">
         <div className="flex p-4 flex-col border-2 md:mr-3 border-[#FCB512] rounded-xl w-96 h-40 md:h-64">
           <div className="flex font-bold text-lg">
             <p>Save 12% on every Order</p>

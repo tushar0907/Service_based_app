@@ -6,7 +6,7 @@ const Top = () => {
   const params = useParams();
   const navigate = useNavigate();
   return (
-    <div className="flex font-worksans border-b font-medium flex-col items-center h-44 w-full">
+    <div className="flex -mt-16 font-worksans border-b font-medium flex-col items-center h-44 w-full">
       <div className="flex w-4/5 lg:w-7/12 items-center p-5 text-xl font-semibold">
         {/* <p> Vehicle Cleaning</p>{" "} */}
         <AiOutlineLeft onClick={() => navigate(-1)} className="mr-3" />

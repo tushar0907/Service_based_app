@@ -35,7 +35,7 @@ const Category = () => {
   };
 
   return (
-    <div className="flex w-4/5 lg:w-7/12 h-3/5 flex-col">
+    <div className="flex w-full lg:w-7/12 h-3/5 flex-col mt-24">
       <MainCategory
         fetchSubCategories={loadSubCategories}
         categories={categories}

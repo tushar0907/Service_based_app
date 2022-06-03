@@ -7,11 +7,11 @@ const MainCategory = (props) => {
     await axios.get(link).then((res) => "");
   };
   return (
-    <div className="flex flex-col cursor-pointer flex-1 border-b border-[#FCB512] lg:mb-16 lg:justify-center lg:pb-10">
-      <div className="flex font-worksans font-medium text-lg p-6 pl-8">
+    <div className="flex font-worksans flex-col cursor-pointer flex-1 border-b border-[#FCB512] lg:mb-16 lg:justify-center lg:pb-10">
+      <div className="flex -ml-16 font-worksans font-bold text-4xl p-6">
         Categories
       </div>
-      <div className="flex items-center py-3 overflow-x-auto ">
+      <div className="flex w-full justify-center items-center py-3">
         {props.categories.map((category) => (
           <div
             key={category.name + category.cid}
