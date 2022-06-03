@@ -6,12 +6,12 @@ import {CgProfile} from "react-icons/cg";
 
 const MenuPanel = () => {
   return (
-    <div className="flex flex-col -ml-5 -mt-16 w-[102%] bg-gradient-to-r from-[#fef6ed] to-[#fdd4ee]">
-      <div className="flex w-full font-body h-16 border-b drop-shadow-2xl items-center text-md text[#c1b5bc]">
+    <div className="flex flex-col w-full bg-gradient-to-r from-[#fef6ed] to-[#fdd4ee]">
+      <div className="flex w-full mt-5 font-body border-b drop-shadow-2xl items-center justify-between text-md text[#c1b5bc]">
         <div className="flex mx-16">
-          <img className="flex mt-12 ml-16" src={logo} width="110" alt="logo" />
+          <img className="flex mt-12l" src={logo} width="100" alt="logo" />
         </div>
-        <ul className="pl-56 ml-[33rem] font-bold text-xl flex space-x-20">
+        <ul className=" font-bold text-xl flex space-x-20">
           <li className="text-md p-3">
             <Link to="/">
               <p>Home</p>
@@ -32,15 +32,15 @@ const MenuPanel = () => {
               <p>Cart</p>
             </Link>
           </li>
+          <li className="flex ml-auto pr-10 items-center">
+            <Link to={"/profile"}>
+              <div className="flex">
+                {/* <p className="flex text-xl font-bold items-center">Profile </p>{" "} */}
+                <CgProfile className="pl-5 flex" size="45" />
+              </div>
+            </Link>
+          </li>
         </ul>
-        <div className="flex w-44 ml-auto pr-10 items-center">
-          <Link to={"/profile"}>
-            <div className="flex">
-              <p className="flex text-xl font-bold items-center">Profile </p>{" "}
-              <CgProfile className="pl-2 flex" size="45" />
-            </div>
-          </Link>
-        </div>
       </div>
       <div className="flex h-3/4 justify-center w-full mb-20">
         <div className="flex w-3/6 justify-center">

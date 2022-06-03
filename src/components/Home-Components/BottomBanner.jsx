@@ -2,8 +2,8 @@ import React from "react";
 
 const BottomBanner = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-[32rem] w-[102%] -ml-5 overflow-x-hidden mb-20 bg-gradient-to-r from-[#edfbfe] via-[#faf5fe] to-[#effafe] ">
-      <div className="flex flex-col font-bold text-5xl justify-center items-center w-[50rem] h-44">
+    <div className="flex flex-col justify-center items-center h-[32rem] w-full overflow-x-hidden mb-20 bg-gradient-to-r from-[#edfbfe] via-[#faf5fe] to-[#effafe] ">
+      <div className="flex flex-col font-bold text-5xl justify-center items-center w-full h-44">
         Join us to receive a better and
         <span className="flex mt-3">more convenient service from us</span>{" "}
       </div>

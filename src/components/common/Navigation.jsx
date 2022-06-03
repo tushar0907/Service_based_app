@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <div className="flex h-full flex-col p-3 bg-[#eecea2] items-center">
       <div className="flex">
-        <img className="flex rounded-full" src={logo} width="100" alt="logo" />
+        <img className="flex rounded-full" src={logo} alt="logo" />
       </div>
       <ul className="flex flex-col flex-1 mt-10">
         <li className=" text-md p-3">

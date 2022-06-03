@@ -27,12 +27,12 @@ const Trending = () => {
       <div className="flex h-auto flex-col w-full justify-start mb-20 pl-4 pr-4 my-16">
         <div className="flex w-full justify-center">
           {" "}
-          <div className="flex w-[96rem] border-b border-black h-20 font-bold text-4xl items-start">
+          <div className="flex w-full border-b border-black h-20 font-bold text-4xl items-start">
             <p>Trending Services</p>
           </div>
         </div>
         <div className="flex w-full justify-center">
-          <div className="flex flex-1 space-x-6 justify-center p-5 pb-7 mb-2 rounded-lg items-center">
+          <div className="flex overflow-x-scroll flex-1 space-x-6 justify-center p-5 pb-7 mb-2 rounded-lg items-center">
             {trendingServices.map((item) => (
               <div
                 key={item.category + item.sid}

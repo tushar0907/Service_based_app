@@ -16,7 +16,7 @@ import Footer from "../components/common/Footer";
 function Home() {
   return (
     <>
-      <div className="w-full px-5 mt-16 lg:w-full ">
+      <div className="w-full lg:w-full ">
         {/* <MidBanner
           image={require("../assets/BgBottom.jpg")}
           description={"THis is Description"}

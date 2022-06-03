@@ -7,7 +7,7 @@ import {MdEmail} from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="flex w-[103%] -ml-5 h-[30rem] p-2 font-worksans mt-24 mb-10 rounded-lg bg-gradient-to-r from-[#fcf7f4] to-[#eae3ef]">
+    <div className="flex w-full h-[30rem] p-2 font-worksans mt-24 mb-10 rounded-lg bg-gradient-to-r from-[#fcf7f4] to-[#eae3ef]">
       <div className="flex h-3/4 w-96 justify-center py-20">
         <img
           className="flex ml-5"

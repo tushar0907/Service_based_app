@@ -24,11 +24,11 @@ const Blog = () => {
   return (
     <div className="flex mb-20 h-auto flex-col w-full justify-start pl-4 pr-4">
       <div className="flex justify-center w-full">
-        <div className="flex w-[96rem] border-b border-black h-20 font-bold text-[2rem] items-start">
+        <div className="flex w-full border-b border-black h-20 font-bold text-[2rem] items-start">
           <p>Featured Services</p>
         </div>
       </div>
-      <div className="flex flex-1 mt-5 p-5 mb-6 rounded-lg justify-center space-x-6 items-center w-full">
+      <div className="flex flex-1 mt-5 p-5 mb-6 rounded-lg justify-center space-x-6 overflow-x-scroll items-center w-full">
         {featureServices.map((item) => (
           <div className="flex w-[23rem] h-[30rem] justify-center items-center rounded-lg box1 flex-col bg-blue-100">
             <div className="flex geeks mt-8 mb-3 w-80 justify-center items-center wrounded-lg">
