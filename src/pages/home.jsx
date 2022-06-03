@@ -16,26 +16,28 @@ import Footer from "../components/common/Footer";
 function Home() {
   return (
     <>
-      <div className="w-full lg:w-full ">
+      <div className="w-full overflow-x-hidden ">
         {/* <MidBanner
           image={require("../assets/BgBottom.jpg")}
           description={"THis is Description"}
         /> */}
         <MenuPanel />
-        <Value />
-        <Blog />
+        <div className="flex flex-col w-full px-6">
+          <Value />
+          <Blog />
 
-        {/* <BottomBanner /> */}
-        <Support />
+          {/* <BottomBanner /> */}
+          <Support />
 
-        <Trending />
-        <BottomBanner />
-        <Schedule />
+          <Trending />
+          <BottomBanner />
+          <Schedule />
 
-        {/* <Advertise /> */}
+          {/* <Advertise /> */}
+        </div>
         <Footer />
 
-        <div className="h-1"></div>
+        {/* <div className="h-1"></div> */}
       </div>
     </>
   );

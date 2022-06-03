@@ -4,7 +4,7 @@ import "../../App.css";
 const Support = () => {
   return (
     <div className="flex w-full justify-center">
-      <div className="flex justify-center h-3/5 mb-20 w-[90%]">
+      <div className="flex justify-center lg:h-3/5 flex-col lg:flex-row mb-20 w-[90%]">
         <div className="flex flex-1 ml-15 rounded-md flex-col justify-center items-center">
           <div className="flex w-full justify-start">
             <div className="flex font-bold pb-6 text-6xl">

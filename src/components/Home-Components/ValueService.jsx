@@ -23,14 +23,14 @@ const ValueService = () => {
     getCategory();
   }, []);
   return (
-    <div className="flex font-worksans h-96 flex-col w-full pl-4 pr-4 mb-20 mt-24">
+    <div className="flex font-worksans flex-col w-full px-4 mb-20 mt-24">
       <div className="flex w-full justify-center">
         <div className="flex w-full border-b border-black h-20 font-bold text-[2.2rem] items-start">
           <p>Value Added Services</p>
         </div>
       </div>
 
-      <div className="flex flex-1 p-5 pb-7 mb-2 overflow-x-scroll rounded-lg space-x-8 items-center w-full">
+      <div className="flex flex-1 py-5 pb-7 mb-2 overflow-x-scroll rounded-lg space-x-8 items-center w-full">
         {valueServices.map((item) => (
           <Link to={`/product/${item.sid}`}>
             <div

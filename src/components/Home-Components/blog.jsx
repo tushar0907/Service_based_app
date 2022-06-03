@@ -13,7 +13,7 @@ const Blog = () => {
       };
       await axios(config)
         .then((res) => {
-          setFeatureServices(res.data.results.slice(0, 5));
+          setFeatureServices(res.data.results);
         })
         .catch(function (error) {
           console.log(error);
@@ -28,25 +28,25 @@ const Blog = () => {
           <p>Featured Services</p>
         </div>
       </div>
-      <div className="flex flex-1 mt-5 p-5 mb-6 rounded-lg space-x-6 overflow-x-scroll items-center w-full">
+      <div className="flex flex-1 mt-5 py-5 mb-6 rounded-lg space-x-6 overflow-x-auto items-center w-full">
         {featureServices.map((item) => (
-          <div className="flex w-full h-[30rem] justify-center items-center rounded-lg box1 flex-col bg-blue-100">
-            <div className="flex geeks mt-8 mb-3 w-80 justify-center items-center wrounded-lg">
+          <div className="flex-none w-80 justify-center items-center rounded-lg box1 flex-col bg-blue-100">
+            <div className="flex geeks p-3 w-full justify-center items-center wrounded-lg">
               <img src={item.image} alt="hello" />
             </div>
             <div className="flex text-xl justify-center items-center mt-2 font-bold">
               {item.name}
             </div>
-            <div className="flex text-center p-2 mt-3">
+            <div className="flex text-center p-3 mt-3">
               <p>{item.description.slice(0, 150)}...</p>
             </div>
 
-            <div className="flex items-center mt-2 mb-6">
+            <div className="flex items-center mt-3 justify-between px-6">
               <div className="flex text-3xl font-bold p-3">
                 ₹{item.service_price}
               </div>
-              <div className="flex hover:bg-orange-500 hover:text-white font-bold text-orange-500 border-4 border-orange-500 w-40 h-16 mb-4 p-2 ml-3 rounded-xl">
-                <button className="flex transition duration-300 ease-in-out items-center ml-auto mr-auto">
+              <div className="flex hover:bg-orange-500 hover:text-white font-bold text-orange-500 border-2 border-orange-500 mb-4 p-2 rounded-md">
+                <button className="flex transition duration-300 ease-in-out text-sm py-1 px-2 items-center">
                   Learn More
                 </button>
               </div>

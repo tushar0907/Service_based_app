@@ -8,7 +8,10 @@ import axios from "axios";
 
 const MenuPanel = () => {
   const [categoryService, setCategoryService] = React.useState([]);
+  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
   React.useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) setIsAuthenticated(true);
     const getCat = async () => {
       var config = {
         method: "get",
@@ -16,7 +19,7 @@ const MenuPanel = () => {
       };
       await axios(config)
         .then((res) => {
-          setCategoryService(res.data.results.slice(0, 4));
+          setCategoryService(res.data.results.slice(0, 3));
         })
         .catch(function (error) {
           console.log(error);
@@ -30,46 +33,51 @@ const MenuPanel = () => {
         <div className="flex mx-16">
           <img className="flex mt-12l" src={logo} width="100" alt="logo" />
         </div>
-        <ul className=" font-bold font-worksans  text-xl flex space-x-20">
-          <li className="text-md p-3">
+        <ul className=" font-worksans  text-xl flex flex-1 items-center justify-center space-x-10">
+          <li className="text-md px-2">
             <Link to="/">
               <p>Home</p>
             </Link>
           </li>
-          <li className=" text-md p-3">
+          <li className="text-md px-2">
             <Link to="/category">
               <p>Category</p>
             </Link>
           </li>
-          <li className=" text-md p-3">
+          <li className=" text-md px-2">
             <Link to="/carrier">
               <p>Carrier</p>
             </Link>
           </li>
-          <li className=" text-md p-3">
+          <li className=" text-md px-2">
             <Link to="/cart">
               <p>Cart</p>
             </Link>
           </li>
-          <li className="flex ml-auto pr-10 items-center">
-            <Link to={"/profile"}>
-              <div className="flex">
-                {/* <p className="flex text-xl font-bold items-center">Profile </p>{" "} */}
-                <CgProfile className="pl-5 flex" size="45" />
-              </div>
-            </Link>
-          </li>
         </ul>
+        <div className="flex ml-auto pr-10 items-center">
+          <Link to={isAuthenticated ? "/profile" : "/login"}>
+            <div className="flex">
+              {/* <p className="flex text-xl font-bold items-center">Profile </p>{" "} */}
+              <CgProfile className="pl-5 flex" size="45" />
+            </div>
+          </Link>
+        </div>
       </div>
-      <div className="flex h-3/4 justify-center w-full mb-20">
-        <div className="flex w-3/6 justify-center">
+
+      <div className="flex items-center lg:justify-center w-full lg:flex-row flex-col mb-20">
+        <div className="flex flex-[.8] justify-center">
           {" "}
-          <img src={require("../../assets/top.png")} />
+          <img
+            className="w-full"
+            width="100%"
+            src={require("../../assets/top.png")}
+          />
         </div>
         <div className="flex flex-col flex-1">
-          <div className="flex mt-32 font-medium text-8xl my-20">
+          <div className="flex lg:mt-32 font-bold text-[4.3rem] lg:my-20">
             <p>
-              One-Stop Solution for your{" "}
+              One-Stop Solution <br /> for your{" "}
               <span className="text-orange-600">Services</span>{" "}
             </p>
           </div>
@@ -79,7 +87,7 @@ const MenuPanel = () => {
           <div className="flex w-full justify-start mr-6 mb-12">
             <div className="flex">
               {" "}
-              <div className="searchbox flex flex-1 lg:w-[35rem]">
+              <div className="searchbox flex flex-1 w-full lg:w-[35rem]">
                 <input
                   className="flex border p-4 px-6 text-sd rounded-l-xl h-20 w-full"
                   type="text"
@@ -92,11 +100,13 @@ const MenuPanel = () => {
               </div>
             </div>
           </div>
-          <div className="flex">
-            <div className="flex p-2 text-orange-600">Popular: </div>
+          <div className="flex overflow-x-auto">
+            <div className="flex p-2 text-orange-600 overflow-x-auto">
+              Popular:{" "}
+            </div>
             {categoryService?.map((item) => (
               <div className="flex mx-2">
-                <div className="flex mr-4 h-10 items-center bg-white w-48 justify-center text-gray-400 rounded-lg">
+                <div className="flex mr-1 h-10 items-center bg-white px-4 justify-center text-gray-400 rounded-lg">
                   <p>{item.name.slice(0, 23)}</p>
                 </div>
               </div>
